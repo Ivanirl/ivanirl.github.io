@@ -69,6 +69,7 @@ const BookingForm = () => {
       date: date.toISOString(),
       message
     };
+    console.log(bookingData)
 
     try {
       // Send booking data to your backend
