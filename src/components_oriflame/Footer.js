@@ -11,23 +11,22 @@ export default function Footer() {
       >
         <div className="right">
           <ul className="vought1">
-            <span>ORIFLAME CARE</span>
+            <span>LOXY VISUALS</span>
             <li>Support center</li>
-            <li>Track your last order</li>
+            <li>View our free dates</li>
             <li>Returns and Claims</li>
           </ul>
           <ul className="vought2">
             <span>CORPORATE INFO</span>
             <li>Work With Us</li>
-            <li>About Oriflame</li>
+            <li>About LoxyVisuals</li>
             <li>Sustainablility</li>
             <li>Investor Relations</li>
-            <li>Oriflame.com</li>
           </ul>
           <ul className="vought3">
             <span>DISCOVER</span>
-            <li>Oriflame Business Oportunity</li>
-            <li>Oriflame Catalogue</li>
+            <li>Partnership Oportunities</li>
+            <li>Our Catalogue</li>
           </ul>
         </div>
       </motion.div>
@@ -39,15 +38,16 @@ export default function Footer() {
       >
         <div className="float">
           <span className="topDawg">
-            Oriflame is a leading beauty company selling direct. We are present
-            in more than 60 countries, of which we are the<br></br> market leader in more
-            than half. Oriflame has its origin in Sweden with corporate offices
-            in Switzerland. We offer a<br></br> wide range of high-quality beauty
-            products as well as a unique opportunity to join our sales force and
-            start your<br></br> own business.
+            LoxyVisuals is a photography and videography brand that prioritizes
+            providing the best digital <br></br>experience for all customers. We have a
+            large national presence, of which we are one of the market
+            leaders.<br></br> LoxyVisuals has its origin in Enugu state, Nigeria with
+            corporate offices in Lagos, Nigeria.We offer a wide range<br></br> 
+            of high-quality services with the singular goal of providing a
+            timeless eexperience and capturing memories.
           </span>
-          <span>Copyright 2023 Oriflame Cosmetics Global SA. All rights reserved.</span>
-          <span className="u">Select Country</span>
+          <span>Copyright 2025 LoxyVisuals. All rights reserved.</span>
+          <span className="u">Select Country/State</span>
         </div>
       </motion.div>
     </div>

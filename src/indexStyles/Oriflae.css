@@ -108,7 +108,7 @@ a {
   font-size: 1em;
   border: solid rgb(91, 92, 92) 1.8px;
   background: none;
-  border-radius: 23px;
+  border-radius: 10px;
   cursor: pointer;
   transition: ease-in-out 0.2s;
   font-weight: lighter;
@@ -262,7 +262,7 @@ button {
   font-size: 1.2em;
   border: none;
   background: rgb(82, 82, 82);
-  border-radius: 23px;
+  border-radius: 10px;
   cursor: pointer;
   transition: ease-in-out 0.2s;
   scale: 1;
@@ -279,7 +279,7 @@ button {
 }
 .BigCaro .rootbeer {
   position: absolute;
-  top: 12.2em;
+  top: 11.2em;
   left: 56em;
   padding: 2em;
   padding-top: 8px;
@@ -302,6 +302,7 @@ button {
   text-shadow: 1px 1px 4px #2b2b2b;
 }
 .BigCaro .rootbeer button {
+  font-size: 1em;
   margin-top: 2em;
   font-weight: 100;
   color: #3d3d3d;
@@ -429,7 +430,7 @@ button {
   font-size: 1em;
   border: solid rgb(91, 92, 92) 1.8px;
   background: none;
-  border-radius: 23px;
+  border-radius: 10px;
   cursor: pointer;
   transition: ease-in-out 0.2s;
   position: absolute;
@@ -473,7 +474,7 @@ button {
   font-size: 1.2em;
   border: none;
   background: rgb(82, 82, 82);
-  border-radius: 23px;
+  border-radius: 10px;
   cursor: pointer;
   transition: ease-in-out 0.2s;
   color: rgb(136, 136, 136);
@@ -515,7 +516,7 @@ button {
   font-size: 1em;
   border: solid rgb(91, 92, 92) 1.8px;
   background: none;
-  border-radius: 23px;
+  border-radius: 10px;
   cursor: pointer;
   transition: ease-in-out 0.2s;
   position: absolute;
@@ -569,7 +570,7 @@ button {
   font-size: 1.2em;
   border: none;
   background: rgb(82, 82, 82);
-  border-radius: 23px;
+  border-radius: 10px;
   cursor: pointer;
   transition: ease-in-out 0.2s;
   color: rgb(136, 136, 136);
@@ -660,7 +661,7 @@ button {
   font-size: 1em;
   border: solid rgb(91, 92, 92) 1.8px;
   background: none;
-  border-radius: 23px;
+  border-radius: 10px;
   cursor: pointer;
   transition: ease-in-out 0.2s;
 }
@@ -921,7 +922,7 @@ button {
   font-size: 1em;
   border: solid rgb(91, 92, 92) 1.8px;
   background: none;
-  border-radius: 23px;
+  border-radius: 10px;
   cursor: pointer;
   transition: ease-in-out 0.2s;
 }
@@ -971,7 +972,7 @@ button {
 }
 
 .booking-form-container {
-  max-width: 600px;
+  width: 800px;
   margin: 0 auto;
   padding: 20px;
   background-color: #f9f9f9;
@@ -1015,7 +1016,7 @@ button {
 }
 
 .submit-button {
-  background-color: #4CAF50;
+  background-color: #4caf50;
   color: white;
   padding: 12px;
   border: none;
@@ -1065,6 +1066,306 @@ button {
   text-decoration: line-through;
 }
 
+.custom-input {
+  border: 2px solid #4caf50;
+  padding: 10px;
+  border-radius: 5px;
+  width: 100%;
+}
+
+.custom-popper {
+  background-color: #f9f9f9;
+  border: 1px solid #ccc;
+  width: 1000px;
+}
+
+@keyframes spinno {
+  0% {
+    rotate: 0deg;
+  }
+  100% {
+    rotate: 360deg;
+  }
+}
+.spin-doctor {
+  margin: 5em 0;
+  border-radius: 20px;
+  background: #dddddd;
+  box-shadow: 2px 2px 8px #383838;
+  padding: 5em 3em;
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  align-items: center;
+}
+.spin-doctor .Spin {
+  animation-name: spinno;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  animation-direction: forward;
+}
+.spin-doctor .Spin img {
+  width: 15em;
+}
+.spin-doctor .textholder {
+  margin-top: 3em;
+}
+.spin-doctor .textholder span {
+  font-weight: 100;
+  font-size: 1.8em;
+}
+
+@media only screen and (max-width: 530px) {
+  .NavBar {
+    padding: 1em 1em;
+    display: none;
+    position: fixed;
+    width: 100%;
+    z-index: 10000;
+    color: #dddddd;
+  }
+  .NavBar button .mens {
+    display: inline-block;
+  }
+  .NavBar .container {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    padding: 0 0em;
+    padding-bottom: 1.1em;
+  }
+  .NavBar .container .rightboy {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: right;
+    gap: 10em;
+  }
+  .NavBar .container .rightboy .logo {
+    padding: 0;
+    padding-top: 5px;
+    display: flex;
+    align-items: center;
+  }
+  .NavBar .container .rightboy .logo .logoimage {
+    width: 4em;
+  }
+  .NavBar .container .closedNav {
+    display: none;
+    font-weight: lighter;
+    text-shadow: 4px 3px 5px rgb(0, 0, 0);
+  }
+  .NavBar .container .navigation {
+    z-index: 900000000000000;
+    display: flex;
+    font-weight: lighter;
+    text-shadow: 4px 3px 5px rgb(0, 0, 0);
+    position: fixed;
+    top: -1em;
+    right: 0;
+    flex-direction: column;
+    background: #fff;
+    padding: 2em;
+    height: 100%;
+    width: 100%;
+    padding-top: 0;
+  }
+  .NavBar .container .navigation .womens {
+    display: inline-block;
+    position: absolute;
+    top: 18px;
+    right: 20px;
+  }
+  .NavBar .container .getstarted {
+    display: none;
+  }
+  .Nav {
+    padding: 0.5em 3.1em;
+    padding-bottom: 0;
+    display: block;
+    position: fixed;
+    width: 100%;
+    z-index: 100000000000;
+    background-color: #ffffff;
+  }
+  .Nav .olodo {
+    display: none;
+  }
+  .Nav .container {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 0.1em;
+    padding-right: 1em;
+    align-items: center;
+  }
+  .Nav .container .rightboy {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+  .Nav .container .rightboy .sololink {
+    font-weight: 100;
+  }
+  .Nav .container .rightboy .logo {
+    padding: 0;
+    padding-top: 5px;
+    display: flex;
+    align-items: center;
+  }
+  .Nav .container .rightboy .logo .logoimage {
+    height: 3em;
+    zoom: 1.3;
+    margin: 0.7em 0;
+  }
+  .Nav .container .closedNav {
+    cursor: pointer;
+    color: rgb(37, 37, 37);
+    display: flex;
+    gap: 3em;
+    font-weight: lighter;
+    padding: 0;
+    justify-content: left;
+    align-items: center;
+  }
+  .Nav .container .getstarted {
+    display: none;
+    align-items: center;
+    gap: 1.5em;
+    transition: ease-in-out 2s;
+  }
+  .Nav .container .getstarted .getStarted {
+    width: -moz-fit-content;
+    width: fit-content;
+    font-weight: bold;
+    padding: 0.9em 2.1em;
+    font-size: 1em;
+    border: solid rgb(91, 92, 92) 1.8px;
+    background: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: ease-in-out 0.2s;
+    font-weight: lighter;
+    border: none;
+    transition: linear 0.2s;
+    opacity: 0.7;
+  }
+  .Nav .container .getstarted .getStarted:hover {
+    opacity: 1;
+    color: black;
+    background: rgb(222, 225, 228);
+  }
+  .Nav .container .getstarted .getStarted:active {
+    opacity: 1;
+    color: white;
+    background: none;
+  }
+  .Nav .container .getstarted .getStarted:hover {
+    opacity: 1;
+    color: rgb(37, 37, 37);
+    background: none;
+  }
+  .Nav .mens {
+    display: block;
+  }
+  .Nav .mens:hover .ops {
+    height: 4px;
+  }
+  .Nav .womens {
+    display: none;
+  }
+  .banner {
+    background-color: rgb(1, 145, 145);
+    padding: 1em 0.5em;
+    font-size: 1.1em;
+    font-weight: 200;
+    position: relative;
+  }
+  .banner .cont {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 2.5em;
+  }
+  .banner .cont span {
+    color: #f5f5f5;
+    text-align: center;
+  }
+  .banner .cont button {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 5px;
+    right: 40%;
+  }
+  .banner .cont button svg {
+    scale: 0.5;
+  }
+  .BigCaro {
+    position: relative;
+    max-height: -moz-min-content;
+    max-height: min-content;
+  }
+  .BigCaro img {
+    width: 100%;
+  }
+  .BigCaro button {
+    color: #f8f8f8;
+    opacity: 0.6;
+    width: -moz-fit-content;
+    width: fit-content;
+    font-weight: 200;
+    padding: 0.9em 2.7em;
+    font-size: 1.2em;
+    border: none;
+    background: rgb(82, 82, 82);
+    border-radius: 10px;
+    cursor: pointer;
+    transition: ease-in-out 0.2s;
+    scale: 1;
+  }
+  .BigCaro button:hover {
+    opacity: 0.7;
+    color: rgb(255, 255, 255);
+    background: rgb(49, 49, 49);
+  }
+  .BigCaro button:active {
+    opacity: 1;
+    color: rgb(32, 32, 32);
+    background: none;
+  }
+  .BigCaro .rootbeer {
+    position: absolute;
+    top: 12.2em;
+    left: 56em;
+    padding: 2em;
+    padding-top: 8px;
+    display: flex;
+    flex-direction: column;
+  }
+  .BigCaro .rootbeer h1 {
+    font-weight: 100;
+    margin: 0;
+    font-size: 5em;
+    line-height: 90%;
+    color: #e7e7e7;
+    text-shadow: 1px 1px 5px #3b3b3b;
+  }
+  .BigCaro .rootbeer span {
+    cursor: default;
+    font-size: 1.3em;
+    margin-top: 0.5em;
+    color: #e7e7e7;
+    text-shadow: 1px 1px 4px #2b2b2b;
+  }
+  .BigCaro .rootbeer button {
+    margin-top: 2em;
+    font-weight: 100;
+    color: #3d3d3d;
+    background-color: white;
+    box-shadow: 1px 1px 4px #2b2b2b;
+  }
+}
 @media only screen and (max-width: 1236px) {
   .NavBar {
     padding: 1em 3.1em;
@@ -1126,107 +1427,6 @@ button {
     position: absolute;
     top: 2em;
     right: 4em;
-  }
-  .NavBar .container .getstarted {
-    display: none;
-  }
-}
-@keyframes spinno {
-  0% {
-    rotate: 0deg;
-  }
-  100% {
-    rotate: 360deg;
-  }
-}
-.spin-doctor {
-  margin: 5em 0;
-  border-radius: 20px;
-  background: #dddddd;
-  box-shadow: 2px 2px 8px #383838;
-  padding: 5em 3em;
-  display: flex;
-  text-align: center;
-  flex-direction: column;
-  align-items: center;
-}
-.spin-doctor .Spin {
-  animation-name: spinno;
-  animation-duration: 10s;
-  animation-iteration-count: infinite;
-  animation-direction: forward;
-}
-.spin-doctor .Spin img {
-  width: 15em;
-}
-.spin-doctor .textholder {
-  margin-top: 3em;
-}
-.spin-doctor .textholder span {
-  font-weight: 100;
-  font-size: 1.8em;
-}
-
-@media only screen and (max-width: 530px) {
-  .NavBar {
-    padding: 1em 1em;
-    display: flex;
-    position: fixed;
-    width: 100%;
-    z-index: 10000;
-    color: #dddddd;
-  }
-  .NavBar button .mens {
-    display: inline-block;
-  }
-  .NavBar .container {
-    display: flex;
-    width: 100%;
-    justify-content: space-between;
-    padding: 0 0em;
-    padding-bottom: 1.1em;
-  }
-  .NavBar .container .rightboy {
-    display: flex;
-    width: 100%;
-    justify-content: space-between;
-    align-items: right;
-    gap: 10em;
-  }
-  .NavBar .container .rightboy .logo {
-    padding: 0;
-    padding-top: 5px;
-    display: flex;
-    align-items: center;
-  }
-  .NavBar .container .rightboy .logo .logoimage {
-    width: 4em;
-  }
-  .NavBar .container .closedNav {
-    display: none;
-    font-weight: lighter;
-    text-shadow: 4px 3px 5px rgb(0, 0, 0);
-  }
-  .NavBar .container .navigation {
-    z-index: 900000000000000;
-    display: flex;
-    font-weight: lighter;
-    text-shadow: 4px 3px 5px rgb(0, 0, 0);
-    position: fixed;
-    top: -1em;
-    right: 0;
-    flex-direction: column;
-    background: #fff;
-    padding: 2em;
-    height: 100%;
-    width: 100%;
-    padding-top: 0;
-  }
-  .NavBar .container .navigation .womens {
-    display: inline-block;
-    position: absolute;
-    top: 18px;
-    right: 20px;
   }
   .NavBar .container .getstarted {
     display: none;

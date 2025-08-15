@@ -46,17 +46,17 @@ export default function () {
         >
           <rect
             y="4"
-            x="14.01123"
-            width="40"
+            x="20.01123"
+            width="35"
             height="3"
             rx="1.5"
             transform="rotate(42.0982 8.01123 0)"
             fill="#f5f5f5"
           />
           <rect
-            x="6.22681"
-            y="34.8887"
-            width="40"
+            x="9.22681"
+            y="38.9"
+            width="35"
             height="3"
             rx="1.5"
             transform="rotate(-45.3915 6.22681 34.8887)"
@@ -73,7 +73,7 @@ export default function () {
       >
         <Banner />
         <Carousel />
-        <section className="wnsection">
+        {/* <section className="wnsection">
           <div className="header">
             <h1>Section One</h1>
             <button>VIEW MORE</button>
@@ -98,11 +98,11 @@ export default function () {
               <button>GET STARTED</button>
             </div>            
           </div>
-        </section>
+        </section> */}
         <section className=" wnsection split">
           <Split />
         </section>
-        <section className="wnsection Bb Be">
+        {/* <section className="wnsection Bb Be">
           <div className="header">
             <img alt="central" src={beauty} />
             <button>VIEW ALL</button>
@@ -116,8 +116,8 @@ export default function () {
             <News />
             <News />
           </div>
-        </section>
-        <section className="wnsection Bb Be values">
+        </section> */}
+        {/* <section className="wnsection Bb Be values">
           <div className="header">
             <h1>The Standards We Live by</h1>
             <span>
@@ -136,7 +136,7 @@ export default function () {
             <img className="cleany" alt="stand" src={rule5}/>
             <img className="clean" alt="stand" src={rule6}/>
           </div>
-        </section>
+        </section> */}
       </motion.div>
       <Footer />
     </div>

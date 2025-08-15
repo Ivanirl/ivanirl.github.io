@@ -143,7 +143,7 @@ function NavBar() {
                   }
                 }}
               >
-                <span className="olodo">Contact us</span>
+                <span className="olodo">Book a call</span>
               </Link>
             </li>
           </ul>
@@ -164,42 +164,42 @@ function NavBar() {
           <section className="leftSlim">
             <div className="left">
               <ul>
-                <li>
+                {/* <li>
                   <div className="bar"></div>
-                  <span>Category 1</span>
-                </li>
+                  <span>Brands and Brand Identity</span>
+                </li>  */}
                 <li className="colored skyblue">
                   <div className="bar"></div>
-                  <span>Category 2</span>
+                  <span>Photography</span>
                 </li>
                 <li className="colored lightpink">
                   <div className="bar"></div>
-                  <span>Category 3</span>
+                  <span>Cinematography</span>
                 </li>
                 <li className="colored ashy">
                   <div className="bar"></div>
-                  <span>Category 4</span>
+                  <span>Motion Design</span>
                 </li>
                 <li className="colored darkblue">
                   <div className="bar"></div>
-                  <span>Category 5</span>
+                  <span>Branding/ Content Management</span>
                 </li>
-                <li className="colored yellow">
+                {/* <li className="colored yellow">
                   <div className="bar"></div>
-                  <span>Category 6</span>
+                  <span>Vlogs and special coverage</span>
                 </li>
                 <li className="colored purple">
                   <div className="bar"></div>
-                  <span>Category 7</span>
+                  <span>Brands and Brand Identity</span>
                 </li>
                 <li className="colored darkgreen">
                   <div className="bar"></div>
-                  <span>Category 8</span>
-                </li>
-                <li className="colored lightblue">
+                  <span>Other</span>
+                </li> */}
+                {/* <li className="colored lightblue">
                   <div className="bar"></div>
                   <span>Category 9</span>
-                </li>
+                </li> */}
               </ul>
             </div>
             <div className="barz"></div>

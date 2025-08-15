@@ -1,0 +1,78 @@
+@use './mixin' as *;
+
+@media only screen and (max-width: 1236px) {
+  .NavBar {
+    padding: 1em 3.1em;
+    display: flex;
+    position: fixed;
+    width: 100%;
+    z-index: 10000;
+
+    .mens {
+      display: inline-block;
+    }
+
+    .container {
+      display: flex;
+      width: 100%;
+      justify-content: space-between;
+      padding: 0 0.2em;
+      padding-bottom: 1.1em;
+      //border-bottom: solid rgb(156, 156, 156) 1px;
+
+      .rightboy {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        align-items: center;
+        gap: 13em;
+
+        .logo {
+          padding: 0;
+          padding-top: 5px;
+          display: flex;
+          align-items: center;
+
+          .logoimage {
+            width: 1em;
+          }
+        }
+      }
+
+      .closedNav {
+        display: none;
+        font-weight: lighter;
+        text-shadow: 4px 3px 5px rgba(0, 0, 0, 1);
+      }
+
+      .navigation {
+        z-index: 900000000000000;
+        display: flex;
+        justify-content: right;
+        font-weight: lighter;
+        text-shadow: 4px 3px 5px rgba(0, 0, 0, 1);
+        position: fixed;
+        top: -1em;
+        right: 0;
+        gap: 10em;
+        flex-direction: column;
+        background: #8d8d8d;
+        padding: 2em;
+        padding-top: 0;
+        height: 100%;
+        width: 100%;
+
+        .womens {
+          display: inline-block;
+          position: absolute;
+          top: 2em;
+          right: 4em;
+        }
+      }
+
+      .getstarted {
+        display: none;
+      }
+    }
+  }
+}
