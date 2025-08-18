@@ -4,11 +4,11 @@ import Logo from "../Resources/Logothree.jpg";
 import { Modal } from "react-overlays";
 import { motion } from "framer-motion";
 import Nothing from "../components_oriflame/empty";
-import Bag from "../Resources/ShopBag2.png";
+
 
 function NavBar() {
   const [activeLink, setActiveLink] = useState("home");
-  const [scrolled, setScrolled] = useState(false);
+  const [scrollStage, setScrollStage] = useState(0);
   const [menuha, setMenuha] = useState(false);
   const [showModal, setShowModal] = useState(false);
 
@@ -20,10 +20,15 @@ function NavBar() {
 
   useEffect(() => {
     const onScroll = () => {
-      if (window.scrollY > 550) {
-        setScrolled(true);
+      const scrollY = window.scrollY;
+      if (scrollY < 550) {
+        setScrollStage(0);
+      } else if (scrollY >= 550 && scrollY < 2050) {
+        setScrollStage(1);
+      } else if (scrollY >= 18000 && scrollY < 10000) {
+        setScrollStage(2);
       } else {
-        setScrolled(false);
+        setScrollStage(3);
       }
     };
     window.addEventListener("scroll", onScroll);
@@ -35,12 +40,22 @@ function NavBar() {
     setActiveLink(value);
   };
 
-
   return (
-    <div className={showModal? "scrollo Nav":"Nav"} id={scrolled ? "scrollo" : ""}>
+    <div
+      className= "Nav"
+      id={
+        scrollStage === 0
+          ? ""
+          : scrollStage === 1
+          ? "scrollo"
+          : scrollStage === 2
+          ? ""
+          : "empty"
+      }
+    >
       <div className="container">
         <div className="rightboy">
-        <button
+          <button
             className="mens"
             onClick={() => {
               setMenuha(!menuha);
@@ -89,7 +104,6 @@ function NavBar() {
               <img src={Logo} className="logoimage" alt="logo image" />
             </Link>
           </div>
-
 
           <ul className="closedNav" id="nav-bubble">
             <li className="bubble-close">
@@ -143,7 +157,7 @@ function NavBar() {
                   }
                 }}
               >
-                <span className="olodo">Book a call</span>
+                <button className="olodo">Book a call</button>
               </Link>
             </li>
           </ul>

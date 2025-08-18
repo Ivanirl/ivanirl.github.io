@@ -46,7 +46,7 @@ a {
   font-weight: 300;
 }
 .Nav {
-  padding: 0.5em 3.1em;
+  padding: 0.5em 6em;
   padding-bottom: 0;
   display: block;
   position: fixed;
@@ -129,7 +129,7 @@ a {
 .Nav .container .getstarted .getStarted:hover {
   opacity: 1;
   color: rgb(37, 37, 37);
-  background: none;
+  background: pink;
 }
 .Nav .mens {
   display: block;
@@ -149,11 +149,121 @@ a {
 }
 
 #scrollo {
-  box-shadow: 1px 1px 1px #e7e7e7;
+  background: none;
 }
-
-.scrollo {
-  box-shadow: 1px 1px 1px #e7e7e7;
+#scrollo .olodo {
+  font-size: 1.3em;
+  position: fixed;
+  right: 6.3em;
+  top: 2.4em;
+  font-weight: 100;
+  background-color: white;
+  box-shadow: 1px 1px 4px #2b2b2b;
+  color: black;
+  opacity: 0.9;
+  width: -moz-fit-content;
+  width: fit-content;
+  font-weight: 200;
+  padding: 0.9em 2.7em;
+  font-size: 1.2em;
+  border: none;
+  background: white;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: ease-in-out 0.2s;
+}
+#scrollo .olodo:hover {
+  opacity: 0.7;
+  color: white;
+  background: black;
+}
+#scrollo .olodo:active {
+  opacity: 1;
+  color: rgb(32, 32, 32);
+  background: none;
+}
+#scrollo .container {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 0.1em;
+  padding-right: 1.3em;
+  align-items: center;
+}
+#scrollo .container .rightboy {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+#scrollo .container .rightboy .sololink {
+  font-weight: 100;
+}
+#scrollo .container .rightboy .logo {
+  padding: 0;
+  padding-top: 5px;
+  display: none;
+  align-items: center;
+}
+#scrollo .container .rightboy .logo .logoimage {
+  height: 3em;
+  zoom: 1.3;
+  margin: 0.7em 0;
+}
+#scrollo .container .closedNav {
+  cursor: pointer;
+  color: rgb(37, 37, 37);
+  display: flex;
+  gap: 3em;
+  font-weight: lighter;
+  padding: 0;
+  justify-content: left;
+  align-items: center;
+}
+#scrollo .container .getstarted {
+  display: flex;
+  align-items: center;
+  gap: 1.5em;
+  transition: ease-in-out 2s;
+}
+#scrollo .container .getstarted .getStarted {
+  width: -moz-fit-content;
+  width: fit-content;
+  font-weight: bold;
+  padding: 0.9em 2.1em;
+  font-size: 1em;
+  border: solid rgb(91, 92, 92) 1.8px;
+  background: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: ease-in-out 0.2s;
+  font-weight: lighter;
+  border: none;
+  transition: linear 0.2s;
+  opacity: 0.7;
+}
+#scrollo .container .getstarted .getStarted:hover {
+  opacity: 1;
+  color: black;
+  background: rgb(222, 225, 228);
+}
+#scrollo .container .getstarted .getStarted:active {
+  opacity: 1;
+  color: white;
+  background: none;
+}
+#scrollo .container .getstarted .getStarted:hover {
+  opacity: 1;
+  color: rgb(37, 37, 37);
+  background: pink;
+}
+#scrollo .mens {
+  display: none;
+}
+#scrollo .mens:hover .ops {
+  height: 4px;
+}
+#scrollo .womens {
+  display: none;
 }
 
 button {
@@ -199,7 +309,7 @@ button {
 }
 
 .banner {
-  background-color: rgb(1, 145, 145);
+  background-color: black;
   padding: 1em 0.5em;
   font-size: 1.1em;
   font-weight: 200;
@@ -233,9 +343,9 @@ button {
   z-index: 1000000000000000000000;
   display: block;
   position: fixed;
-  right: 3em;
+  right: 7em;
   bottom: 3em;
-  background-color: rgb(1, 145, 145);
+  background-color: black;
   height: 50px;
   width: 50px;
   border-radius: 50%;
@@ -279,14 +389,17 @@ button {
 }
 .BigCaro .rootbeer {
   position: absolute;
-  top: 11.2em;
-  left: 56em;
+  top: 9.2em;
+  left: 18em;
   padding: 2em;
   padding-top: 8px;
   display: flex;
   flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
 .BigCaro .rootbeer h1 {
+  text-align: center;
   font-weight: 100;
   margin: 0;
   font-size: 5em;
@@ -294,10 +407,13 @@ button {
   color: #e7e7e7;
   text-shadow: 1px 1px 5px #3b3b3b;
 }
+.BigCaro .rootbeer .bot {
+  font-size: 1.5em;
+}
 .BigCaro .rootbeer span {
   cursor: default;
   font-size: 1.3em;
-  margin-top: 0.5em;
+  margin-top: 2.5em;
   color: #e7e7e7;
   text-shadow: 1px 1px 4px #2b2b2b;
 }
@@ -971,16 +1087,63 @@ button {
   gap: 1em;
 }
 
+.ohio {
+  padding-top: 0;
+  background: #ffffff;
+  align-items: right;
+  display: flex;
+  justify-content: right;
+  padding-right: 16em;
+}
+
+.picTower {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-image: url("../Resources/Jor-DSC00689-Edit.jpg");
+  background-position: -80em -1em;
+  background-repeat: no-repeat;
+  height: 79em;
+  width: 60%;
+  padding-left: 3em;
+  padding-top: 12em;
+}
+.picTower .textBox {
+  position: fixed;
+  top: 15em;
+  left: 6em;
+}
+.picTower .textBox h1 {
+  font-weight: 100;
+  margin: 0;
+  margin-bottom: 10px;
+  font-size: 5em;
+  line-height: 90%;
+  color: #e7e7e7;
+  text-shadow: 1px 1px 5px #3b3b3b;
+}
+.picTower .textBox span {
+  cursor: default;
+  font-size: 1.3em;
+  margin-top: 2.5em;
+  color: #e7e7e7;
+  text-shadow: 1px 1px 4px #2b2b2b;
+}
+
 .booking-form-container {
-  width: 800px;
+  scale: 0.8;
+  width: 30em;
   margin: 0 auto;
-  padding: 20px;
+  margin-top: 6em;
+  padding: 3em 2em;
   background-color: #f9f9f9;
   border-radius: 8px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 4px 6px 7px rgba(1, 1, 1, 0.1);
+  font-size: 1.2em;
 }
 
 .booking-form-container h2 {
+  display: none;
   text-align: center;
   color: #333;
   margin-bottom: 20px;
@@ -989,7 +1152,7 @@ button {
 .booking-form {
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 25px;
 }
 
 .form-group {
@@ -1022,7 +1185,7 @@ button {
   border: none;
   border-radius: 4px;
   cursor: pointer;
-  font-size: 16px;
+  font-size: 2em;
   transition: background-color 0.3s;
 }
 
@@ -1036,8 +1199,14 @@ button {
 }
 
 .success-message {
+  scale: 1.2;
+  position: absolute;
+  top: 60em;
+  left: 20%;
+  z-index: 10000;
   background-color: #dff0d8;
   color: #3c763d;
+  box-shadow: 2px 2px 2px black;
   padding: 10px;
   border-radius: 4px;
   margin-bottom: 15px;
@@ -1053,20 +1222,44 @@ button {
   text-align: center;
 }
 
+#last {
+  order: 10;
+}
+
 .react-datepicker {
-  font-size: 1.1em;
+  margin-top: 8px;
+  scale: 1.05;
+  font-size: 1.4em;
+  width: -moz-max-content;
+  width: max-content;
+  order: 0;
+}
+.react-datepicker:hover {
+  scale: 1.2;
 }
 
 .react-datepicker__header {
+  font-size: 1em;
   background-color: #f0f0f0;
+}
+.react-datepicker__header h2 {
+  display: block;
+}
+
+.react-datepicker__aria-live {
+  display: block;
+  font-size: 1.9em;
+  right: 3em;
 }
 
 .react-datepicker__day--disabled {
+  font-size: 0.9em;
   color: #ccc;
   text-decoration: line-through;
 }
 
 .custom-input {
+  font-size: 0.2em;
   border: 2px solid #4caf50;
   padding: 10px;
   border-radius: 5px;
@@ -1074,9 +1267,37 @@ button {
 }
 
 .custom-popper {
+  font-size: 0.2em;
   background-color: #f9f9f9;
   border: 1px solid #ccc;
   width: 1000px;
+}
+
+.react-datepicker__week {
+  font-size: 0.9em;
+}
+
+.submit-button {
+  order: 11;
+  margin-top: 1.3em;
+  color: #f8f8f8;
+  width: 100%;
+  font-weight: 200;
+  padding: 0.9em 2.7em;
+  font-size: 1.3em;
+  border: none;
+  background: black;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: ease-in-out 0.2s;
+}
+.submit-button:hover {
+  color: rgb(50, 50, 50);
+  background: rgb(135, 135, 135);
+}
+.submit-button:active {
+  color: rgb(32, 32, 32);
+  background: none;
 }
 
 @keyframes spinno {
