@@ -167,7 +167,11 @@ const BookingForm = () => {
           />
         </div>
 
-        <div className="form-group">
+        <div className="form-group" id="last">
+          {" "}
+          {submitMessage && !showSuccess && (
+            <div className="error-message">{submitMessage}</div>
+          )}
           <label htmlFor="date">Appointment Date</label>
           <DatePicker
             id="date"
@@ -191,10 +195,6 @@ const BookingForm = () => {
             rows="4"
           />
         </div>
-
-        {submitMessage && !showSuccess && (
-          <div className="error-message">{submitMessage}</div>
-        )}
 
         <button type="submit" className="submit-button" disabled={isSubmitting}>
           {isSubmitting ? "Submitting..." : "Book Now"}
