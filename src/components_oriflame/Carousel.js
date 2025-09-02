@@ -12,13 +12,13 @@ export default function Carousel() {
       <img src={herobiggy} />
       <div className="rootbeer">
         {" "}
-        <h1 className="top" style={{ lineHeight: "0.6em" }}>
+        <h1 className="top" style={{ lineHeight: "0.6em", }}>
           Welcome <br></br>
           <span
             style={{
               fontSize: "0.8em",
               padding: 0,
-              lineHeight: 0,
+              lineHeight: 1,
               opacity: 0.4,
             }}
           >
