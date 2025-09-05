@@ -45,3 +45,25 @@
     background: none;
   }
 }
+
+@mixin darksignupbutton {
+  color: #f8f8f8;
+  width: fit-content;
+  font-weight: 200;
+  padding: 0.9em 2em;
+  font-size: 1.2em;
+  border: none;
+  background: rgb(0, 0, 0);
+  border-radius: 10px;
+  cursor: pointer;
+  transition: ease-in-out 0.2s;
+
+  &:hover {
+    color: rgb(255, 255, 255);
+    background: rgb(49, 49, 49);
+  }
+  &:active {
+    color: rgb(32, 32, 32);
+    background: none;
+  }
+}

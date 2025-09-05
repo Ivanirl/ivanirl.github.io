@@ -46,8 +46,7 @@ a {
   font-weight: 300;
 }
 .Nav {
-  padding: 0.5em 6em;
-  padding-bottom: 0;
+  padding: 1em 6.5em;
   display: block;
   position: fixed;
   width: 100%;
@@ -55,90 +54,55 @@ a {
   background-color: #ffffff;
 }
 .Nav .olodo {
-  font-size: 1.3em;
+  color: #f8f8f8;
+  width: -moz-fit-content;
+  width: fit-content;
+  font-weight: 200;
+  padding: 0.9em 2em;
+  font-size: 1.2em;
+  border: none;
+  background: rgb(0, 0, 0);
+  border-radius: 10px;
+  cursor: pointer;
+  transition: ease-in-out 0.2s;
+  font-size: 1em;
+}
+.Nav .olodo:hover {
+  color: rgb(255, 255, 255);
+  background: rgb(49, 49, 49);
+}
+.Nav .olodo:active {
+  color: rgb(32, 32, 32);
+  background: none;
 }
 .Nav .container {
   display: flex;
-  justify-content: space-between;
-  padding: 0 0.1em;
-  padding-right: 1.3em;
+  justify-content: center;
+  padding: 0 6em;
   align-items: center;
 }
-.Nav .container .rightboy {
+.Nav .container .float {
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 100%;
 }
-.Nav .container .rightboy .sololink {
-  font-weight: 100;
-}
-.Nav .container .rightboy .logo {
+.Nav .container .float .logo {
   padding: 0;
   padding-top: 5px;
   display: flex;
   align-items: center;
 }
-.Nav .container .rightboy .logo .logoimage {
-  height: 3em;
+.Nav .container .float .logo .logoimage {
+  height: 2.7em;
   zoom: 1.3;
   margin: 0.7em 0;
-}
-.Nav .container .closedNav {
-  cursor: pointer;
-  color: rgb(37, 37, 37);
-  display: flex;
-  gap: 3em;
-  font-weight: lighter;
-  padding: 0;
-  justify-content: left;
-  align-items: center;
 }
 .Nav .container .getstarted {
   display: flex;
   align-items: center;
   gap: 1.5em;
   transition: ease-in-out 2s;
-}
-.Nav .container .getstarted .getStarted {
-  width: -moz-fit-content;
-  width: fit-content;
-  font-weight: bold;
-  padding: 0.9em 2.1em;
-  font-size: 1em;
-  border: solid rgb(91, 92, 92) 1.8px;
-  background: none;
-  border-radius: 10px;
-  cursor: pointer;
-  transition: ease-in-out 0.2s;
-  font-weight: lighter;
-  border: none;
-  transition: linear 0.2s;
-  opacity: 0.7;
-}
-.Nav .container .getstarted .getStarted:hover {
-  opacity: 1;
-  color: black;
-  background: rgb(222, 225, 228);
-}
-.Nav .container .getstarted .getStarted:active {
-  opacity: 1;
-  color: white;
-  background: none;
-}
-.Nav .container .getstarted .getStarted:hover {
-  opacity: 1;
-  color: rgb(37, 37, 37);
-  background: pink;
-}
-.Nav .mens {
-  display: block;
-}
-.Nav .mens:hover .ops {
-  height: 4px;
-}
-.Nav .womens {
-  display: none;
 }
 
 .bag {
@@ -189,22 +153,22 @@ a {
   padding-right: 1.3em;
   align-items: center;
 }
-#scrollo .container .rightboy {
+#scrollo .container .float {
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 100%;
 }
-#scrollo .container .rightboy .sololink {
+#scrollo .container .float .sololink {
   font-weight: 100;
 }
-#scrollo .container .rightboy .logo {
+#scrollo .container .float .logo {
   padding: 0;
   padding-top: 5px;
   display: none;
   align-items: center;
 }
-#scrollo .container .rightboy .logo .logoimage {
+#scrollo .container .float .logo .logoimage {
   height: 3em;
   zoom: 1.3;
   margin: 0.7em 0;
@@ -276,7 +240,8 @@ button {
 
 .navbar-link {
   cursor: pointer;
-  font-size: 0.9em;
+  font-size: 0.8em;
+  font-weight: 200;
   opacity: 0.6;
   transition: 0.1s ease-in-out;
 }
@@ -304,7 +269,7 @@ button {
 }
 
 .oho {
-  padding-top: 7.1em;
+  padding-top: 7.9em;
   background: #ffffff;
 }
 
@@ -389,33 +354,63 @@ button {
 }
 .BigCaro .rootbeer {
   position: absolute;
-  top: 9.2em;
-  left: 18em;
+  top: 8em;
+  left: 50%;
+  transform: translateX(-50%);
   padding: 2em;
   padding-top: 8px;
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
+  width: -moz-max-content;
+  width: max-content;
+}
+.BigCaro .rootbeer span {
+  display: block;
+  font-size: 1.3em;
+  color: #e7e7e7;
+  text-shadow: 1px 1px 4px #2b2b2b;
+  text-align: center;
 }
 .BigCaro .rootbeer h1 {
+  display: inline-block;
+  justify-content: center;
   text-align: center;
   font-weight: 100;
   margin: 0;
-  font-size: 5em;
+  font-size: 9em;
   line-height: 90%;
   color: #e7e7e7;
   text-shadow: 1px 1px 5px #3b3b3b;
 }
-.BigCaro .rootbeer .bot {
-  font-size: 1.5em;
+.BigCaro .rootbeer h1 span {
+  font-size: 0.8em;
+  color: pink;
+  text-align: center;
 }
-.BigCaro .rootbeer span {
+.BigCaro .rootbeer .wrap {
+  display: block;
+  text-align: center;
+}
+.BigCaro .rootbeer .bot {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  justify-content: center;
   cursor: default;
-  font-size: 1.3em;
   margin-top: 2.5em;
   color: #e7e7e7;
   text-shadow: 1px 1px 4px #2b2b2b;
+  text-align: center;
+}
+.BigCaro .rootbeer .bot span {
+  display: flex;
+  font-weight: 100;
+  font-size: 1.2em;
+  color: pink;
+  text-shadow: 1px 1px 4px rgb(107, 107, 107);
+  margin: 0;
 }
 .BigCaro .rootbeer button {
   font-size: 1em;
@@ -1419,22 +1414,22 @@ button {
     padding-right: 1em;
     align-items: center;
   }
-  .Nav .container .rightboy {
+  .Nav .container .float {
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 100%;
   }
-  .Nav .container .rightboy .sololink {
+  .Nav .container .float .sololink {
     font-weight: 100;
   }
-  .Nav .container .rightboy .logo {
+  .Nav .container .float .logo {
     padding: 0;
     padding-top: 5px;
     display: flex;
     align-items: center;
   }
-  .Nav .container .rightboy .logo .logoimage {
+  .Nav .container .float .logo .logoimage {
     height: 3em;
     zoom: 1.3;
     margin: 0.7em 0;

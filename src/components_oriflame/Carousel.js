@@ -11,24 +11,19 @@ export default function Carousel() {
     <div className="BigCaro">
       <img src={herobiggy} />
       <div className="rootbeer">
-        {" "}
-        <h1 className="top" style={{ lineHeight: "0.6em", }}>
-          Welcome <br></br>
-          <span
-            style={{
-              fontSize: "0.8em",
-              padding: 0,
-              lineHeight: 1,
-              opacity: 0.4,
-            }}
-          >
-            &
+        <div className="wrap">
+          <h1 className="top" style={{ lineHeight: "0.4em" }}>
+            <span style={{ lineHeight: "0em",}}>Capture </span>
+            <br></br>Your digital story.
+          </h1>
+        </div>
+        <div className="wrap">
+          <span className="bot">
+            Do you need a <span className="switch">Photographer?</span>
           </span>
-          <br></br>
-          <span className="bot">Some other Shit!</span>
-        </h1>
-        <span>Some filller text about our mission and stuff.</span>
-        <button className="themebutton1" onClick={move}>BOOK A CALL NOW</button>
+          <span>Some filller text about our mission and stuff.</span>
+          <button onClick={move}>BOOK A CALL NOW</button>
+        </div>
       </div>
     </div>
   );
