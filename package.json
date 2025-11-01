@@ -13,7 +13,7 @@
     "cors": "^2.8.5",
     "dotenv": "^16.4.7",
     "express": "^5.1.0",
-    "framer-motion": "^10.15.1",
+    "framer-motion": "^10.18.0",
     "mongodb": "^6.15.0",
     "mongoose": "^8.13.1",
     "nodemailer": "^6.10.0",
@@ -21,10 +21,12 @@
     "react-bootstrap": "^2.8.0",
     "react-datepicker": "^8.2.1",
     "react-dom": "^18.3.1",
+    "react-native-svg-transformer": "^1.5.1",
     "react-overlays": "^5.2.1",
     "react-router-dom": "^6.11.1",
-    "react-scripts": "5.0.1",
+    "react-scripts": "^5.0.1",
     "react-transition-group": "^4.4.5",
+    "styled-components": "^6.1.19",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
