@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.css": "/loxy-visuals/static/css/main.e0449311.css",
+    "main.js": "/loxy-visuals/static/js/main.37ea4c70.js",
+    "static/media/Jor-DSC00727-Edit.jpg": "/loxy-visuals/static/media/Jor-DSC00727-Edit.414af1eab74797e235e4.jpg",
+    "static/media/Head.JPG": "/loxy-visuals/static/media/Head.3adf84b9aee6567c1651.JPG",
+    "static/media/Jor-DSC00689-Edit.jpg": "/loxy-visuals/static/media/Jor-DSC00689-Edit.abc393f0e670e29e2528.jpg",
+    "static/media/CentraNo2-Bold.ttf": "/loxy-visuals/static/media/CentraNo2-Bold.2faff7f7d3fc92a2fcd9.ttf",
+    "static/media/CentraNo2-Medium.ttf": "/loxy-visuals/static/media/CentraNo2-Medium.f94be5b326d78bb32b95.ttf",
+    "static/media/CentraNo2-Book.ttf": "/loxy-visuals/static/media/CentraNo2-Book.2b143fa4b734a3584043.ttf",
+    "static/media/beautysection.png": "/loxy-visuals/static/media/beautysection.9ede94b08f0e04a9c6c8.png",
+    "static/media/productimage.png": "/loxy-visuals/static/media/productimage.f15054c028648807eb57.png",
+    "static/media/rule4.png": "/loxy-visuals/static/media/rule4.51a4bfdeb7fcdb164dec.png",
+    "static/media/rule6.png": "/loxy-visuals/static/media/rule6.a44791f55b882642f865.png",
+    "static/media/rule1.png": "/loxy-visuals/static/media/rule1.affffa8dd816b8be034f.png",
+    "static/media/rule3..png": "/loxy-visuals/static/media/rule3..21f3be87eb4578402cd8.png",
+    "static/media/rule2.png": "/loxy-visuals/static/media/rule2.fc4ebadedd64cca8d3c6.png",
+    "static/media/rule5.png": "/loxy-visuals/static/media/rule5.b696c6f011b601a37dd2.png",
+    "index.html": "/loxy-visuals/index.html",
+    "main.e0449311.css.map": "/loxy-visuals/static/css/main.e0449311.css.map",
+    "main.37ea4c70.js.map": "/loxy-visuals/static/js/main.37ea4c70.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e0449311.css",
+    "static/js/main.37ea4c70.js"
+  ]
+}
