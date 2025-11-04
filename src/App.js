@@ -1,5 +1,4 @@
 import {
-  BrowserRouter as Router,
   Routes,
   Route,
   useLocation,
@@ -17,7 +16,7 @@ function App() {
 
   return (
     <DefaultLayout>
-      <AnimatePresence>
+      <AnimatePresence mode="wait">
       <Routes location={location} key={location.pathname}>
         <Route path="/" element={<LandingPage />}></Route>
         <Route path="/filler" element={<Filler />}></Route>
