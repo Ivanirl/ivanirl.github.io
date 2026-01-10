@@ -13,9 +13,9 @@ function NavBar() {
   useEffect(() => {
     const onScroll = () => {
       const scrollY = window.scrollY;
-      if (scrollY < 550) {
+      if (scrollY < 250) {
         setScrollStage(0);
-      } else if (scrollY >= 550 && scrollY < 2000) {
+      } else if (scrollY >= 250 && scrollY < 2000) {
         setScrollStage(1);
       } else if (scrollY >= 18000 && scrollY < 10000) {
         setScrollStage(2);
@@ -42,7 +42,7 @@ function NavBar() {
           ? "scrollo"
           : scrollStage === 2
           ? ""
-          : "empty"
+          : "scrollo"
       }
     >
       <div className="container">
@@ -52,20 +52,6 @@ function NavBar() {
               <img src={Logo} className="logoimage" alt="logo image" />
             </Link>
           </div>
-
-          <Link
-            to="/filler"
-            onClick={() => {
-              if (window.screenX < 531) {
-                onUpdateActiveLink("/filler");
-              } else {
-                onUpdateActiveLink("/filler");
-                setMenuha(!menuha);
-              }
-            }}
-          >
-            <button className="olodo">Book a call</button>
-          </Link>
         </div>
       </div>
     </div>

@@ -12,7 +12,7 @@
   &:hover {
     opacity: 1;
     color: black;
-    background: rgb(222, 225, 228);
+    background: rgb(255, 255, 255);
   }
   &:active {
     opacity: 1;
@@ -35,7 +35,7 @@
   transition: ease-in-out 0.2s;
 
   &:hover {
-    opacity: 0.7;
+    opacity: 1;
     color: rgb(255, 255, 255);
     background: rgb(49, 49, 49);
   }

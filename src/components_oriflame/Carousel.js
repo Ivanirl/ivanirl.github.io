@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
 export default function Carousel() {
-  const texts = ["Photographer?", "Videographer?", "Video Editor?", "Cinematographer?"];
+  const texts = ["Web Developer?", "App Developer?","Videographer?", "Video Editor?", "Photo Editor?"];
   const [index, setIndex] = useState(0);
 
   useEffect(() => {
@@ -30,8 +30,8 @@ export default function Carousel() {
       <div className="rootbeer">
         <div className="wrap">
           <h1 className="top" style={{ lineHeight: "0.4em" }}>
-            <span style={{ lineHeight: "0em" }}>Capture </span>
-            <br></br>Your digital story.
+            <span style={{ lineHeight: "0em" }}>Create </span>
+            <br></br>Create Create.
           </h1>
         </div>
         <div className="wrap">
@@ -51,7 +51,7 @@ export default function Carousel() {
               </motion.span>
             </AnimatePresence>
           </span>
-          <span>At LoxyVisuals we are devoted to providing the best.</span>
+          <span>Get access to a wide variety of digital services today.</span>
           <button onClick={movey}>BOOK A CALL NOW</button>
         </div>
       </div>

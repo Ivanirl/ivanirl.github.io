@@ -2,6 +2,7 @@
 import React from "react";
 import styled from "styled-components";
 import { motion } from "framer-motion";
+import logo from "../Resources/Logothree.jpg"
 
 // Header styles and component
 const HeaderBar = styled.header`
@@ -97,7 +98,7 @@ const CTAButton = styled(motion.a)`
 function Header() {
   return (
     <HeaderBar>
-      <Logo src="/logo.png" alt="Logo" />
+      <Logo src={logo} alt="Logo" />
       <Nav>
         <NavLink href="#work" whileHover={{ scale: 1.08 }}>Work</NavLink>
         <NavLink href="#about" whileHover={{ scale: 1.08 }}>About</NavLink>
