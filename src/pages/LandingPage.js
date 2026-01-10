@@ -14,6 +14,8 @@ import CardA from "../components_oriflame/productcardA";
 import Split from "../components_oriflame/SplitBanner";
 import News from "../components_oriflame/ArticleThumbnail";
 import Footer from "../components_oriflame/Footer";
+import ImageGrid from "../components_oriflame/ImageGrid";
+import ThemeToggle from "../components_oriflame/ThemeToggle";
 
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
@@ -99,9 +101,12 @@ export default function () {
             </div>            
           </div>
         </section> */}
-        <section className=" wnsection split">
-          <Split />
-        </section>
+        <div className="split-with-grid-wrapper">
+          <ImageGrid />
+          <section className=" wnsection split">
+            <Split />
+          </section>
+        </div>
         {/* <section className="wnsection Bb Be">
           <div className="header">
             <img alt="central" src={beauty} />
@@ -138,6 +143,7 @@ export default function () {
           </div>
         </section> */}
       </motion.div>
+      <ThemeToggle />
       <Footer />
     </div>
   );

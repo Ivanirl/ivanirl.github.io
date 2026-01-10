@@ -1,8 +1,16 @@
-@use './mixin' as *;
+@import "./mixin";
 
 @media only screen and (max-width: 1236px) {
+  * {
+    font-size: 0.95em;
+  }
+
+  body {
+    font-size: 0.85em;
+  }
+
   .NavBar {
-    padding: 1em 3.1em;
+    padding: 1em 2em;
     display: flex;
     position: fixed;
     width: 100%;
@@ -17,15 +25,14 @@
       width: 100%;
       justify-content: space-between;
       padding: 0 0.2em;
-      padding-bottom: 1.1em;
-      //border-bottom: solid rgb(156, 156, 156) 1px;
+      padding-bottom: 0.8em;
 
       .rightboy {
         display: flex;
         width: 100%;
         justify-content: space-between;
         align-items: center;
-        gap: 13em;
+        gap: 8em;
 
         .logo {
           padding: 0;
@@ -34,15 +41,14 @@
           align-items: center;
 
           .logoimage {
-            width: 1em;
+            width: 1.2em;
+            height: auto;
           }
         }
       }
 
       .closedNav {
         display: none;
-        font-weight: lighter;
-        text-shadow: 4px 3px 5px rgba(0, 0, 0, 1);
       }
 
       .navigation {
@@ -54,10 +60,10 @@
         position: fixed;
         top: -1em;
         right: 0;
-        gap: 10em;
+        gap: 8em;
         flex-direction: column;
         background: #8d8d8d;
-        padding: 2em;
+        padding: 1.5em;
         padding-top: 0;
         height: 100%;
         width: 100%;
@@ -65,8 +71,8 @@
         .womens {
           display: inline-block;
           position: absolute;
-          top: 2em;
-          right: 4em;
+          top: 1.5em;
+          right: 3em;
         }
       }
 
@@ -74,5 +80,191 @@
         display: none;
       }
     }
+  }
+
+  .Nav {
+    padding: 0.8em 3em;
+
+    .container {
+      padding: 0 3em;
+
+      .float {
+        .logo {
+          .logoimage {
+            height: 2.2em;
+            zoom: 1;
+          }
+        }
+      }
+    }
+
+    .container .getstarted {
+      gap: 1.2em;
+    }
+  }
+
+  .banner {
+    padding: 0.8em 2em;
+    font-size: 0.95em;
+
+    .cont {
+      span {
+        font-size: 0.9em;
+      }
+
+      button {
+        svg {
+          scale: 0.45;
+        }
+      }
+    }
+  }
+
+  .oho {
+    padding-top: 6.5em;
+  }
+
+  .BigCaro {
+    img {
+      width: 100%;
+      height: auto;
+    }
+
+    .rootbeer {
+      top: 6em;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 80%;
+      padding: 1.5em;
+      text-align: center;
+
+      h1 {
+        font-size: 3.5em;
+        line-height: 100%;
+      }
+
+      span {
+        font-size: 1.1em;
+      }
+
+      .wrap {
+        width: 100%;
+      }
+
+      .bot {
+        flex-direction: column;
+        gap: 0.8em;
+        padding-right: 0;
+
+        span {
+          position: static;
+          display: block;
+          font-size: 0.95em;
+        }
+      }
+
+      button {
+        padding: 0.7em 1.5em;
+        font-size: 0.95em;
+      }
+    }
+  }
+
+  .BigSplit {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2em;
+    padding: 3em 2em;
+    align-items: center;
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+
+    .bgcircle {
+      display: none;
+    }
+
+    .RightBoy {
+      padding: 0 2em;
+
+      h1 {
+        font-size: 2.2em;
+        margin: 0 0 1.2em 0;
+
+        span {
+          display: block;
+          font-size: 0.9em;
+          margin-top: 0.6em;
+        }
+      }
+
+      button {
+        padding: 0.7em 1.8em;
+        font-size: 0.95em;
+      }
+    }
+  }
+
+  .wnsection {
+    padding: 2.5em 2em;
+
+    .header {
+      h1 {
+        font-size: 1.8em;
+      }
+
+      button {
+        padding: 0.6em 1.3em;
+        font-size: 0.85em;
+      }
+
+      span {
+        font-size: 0.85em;
+
+        br {
+          display: none;
+        }
+      }
+    }
+
+    .showcase {
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1.5em;
+
+      .imgCont {
+        img {
+          width: 100%;
+          height: auto;
+        }
+
+        button {
+          padding: 0.6em 1.2em;
+          font-size: 0.85em;
+        }
+      }
+    }
+  }
+
+  .showgreen {
+    right: 3em;
+    bottom: 2.5em;
+    width: 48px;
+    height: 48px;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-size: 0.98em;
+  }
+
+  .themebutton1 {
+    padding: 0.65em 1.4em;
+    font-size: 0.9em;
+  }
+
+  .olodo {
+    font-size: 0.95em;
   }
 }

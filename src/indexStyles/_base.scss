@@ -1,4 +1,43 @@
-@use "./mixin" as *;
+@import "./mixin";
+
+/* Smooth initial load: hide until JS sets `is-loaded` to avoid flash/jank */
+html:not(.is-loaded) body {
+  opacity: 0;
+  transform: translateY(6px);
+  transition: opacity 360ms cubic-bezier(.2,.8,.2,1), transform 360ms cubic-bezier(.2,.8,.2,1);
+}
+
+html.is-loaded body {
+  opacity: 1;
+  transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html:not(.is-loaded) body,
+  html.is-loaded body {
+    transition: none !important;
+    transform: none !important;
+    opacity: 1 !important;
+  }
+}
+
+/* Responsive font sizing */
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+@media (max-width: 900px) {
+  html {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 600px) {
+  html {
+    font-size: 14px;
+  }
+}
 
 * {
   font-family: "Centra", sans-serif !important;
@@ -6,6 +45,8 @@
   list-style: none;
   color: rgb(37, 37, 37);
   transition: all 0.2s ease;
+  margin: 0;
+  padding: 0;
 }
 
 h1,
@@ -26,6 +67,14 @@ body {
   scroll-behavior: smooth;
   transition: ease 0.2s;
   font-size: 0.8em;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
 }
 
 a {
@@ -36,18 +85,21 @@ a {
   font-family: Centra;
   src: url(../Resources/font/CentraNo2-Bold.ttf);
   font-weight: 100;
+  font-display: swap;
 }
 
 @font-face {
   font-family: Centra;
   src: url(../Resources/font/CentraNo2-Medium.ttf);
   font-weight: 200;
+  font-display: swap;
 }
 
 @font-face {
   font-family: Centra;
   src: url(../Resources/font/CentraNo2-Book.ttf);
   font-weight: 300;
+  font-display: swap;
 }
 
 .Nav {
@@ -355,7 +407,7 @@ button {
       text-shadow: 1px 1px 5px #3b3b3b;
       span {
         font-size: 0.8em;
-        color: pink;
+        color: yellow;
         text-align: center;
 
       }
@@ -383,7 +435,7 @@ button {
         display: flex;
         font-weight: 100;
         font-size: 1.2em;
-        color: pink;
+        color: yellow;
         text-shadow: 1px 1px 4px rgb(107, 107, 107);
         margin: 0;
       }
@@ -396,6 +448,26 @@ button {
       background-color: white;
       box-shadow: 1px 1px 4px #2b2b2b;
     }
+  }
+}
+
+/* Generic reveal-on-scroll utility */
+.reveal {
+  opacity: 0;
+  transform: translateY(18px) scale(0.995);
+  transition: opacity 520ms cubic-bezier(.2,.85,.25,1), transform 520ms cubic-bezier(.2,.85,.25,1);
+  will-change: opacity, transform;
+}
+.reveal.in-view {
+  opacity: 1;
+  transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal, .reveal.in-view {
+    transition: none !important;
+    transform: none !important;
+    opacity: 1 !important;
   }
 }
 
@@ -1242,6 +1314,127 @@ button {
     span {
       font-weight: 100;
       font-size: 1.8em;
+    }
+  }
+}
+
+/* Split with Grid Wrapper */
+.split-with-grid-wrapper {
+  position: relative;
+}
+
+/* Floating Images Container */
+.floating-images-container {
+  position: relative;
+  height: 0;
+  z-index: 10;
+  pointer-events: none;
+
+  .floating-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2em;
+    padding: 0 3em;
+    max-width: 1000px;
+    margin: 0 auto;
+    position: relative;
+    top: -12em;
+    pointer-events: auto;
+
+    .floating-image-item {
+      position: relative;
+      overflow: hidden;
+      border-radius: 8px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+      &:hover {
+        transform: translateY(-12px);
+        box-shadow: 0 12px 32px rgba(0, 0, 0, 0.25);
+      }
+
+      .image-placeholder {
+        width: 100%;
+        padding-bottom: 75%;
+        position: relative;
+        overflow: hidden;
+        background: #e0e0e0;
+
+        img {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          transition: transform 0.3s ease, opacity 0.6s ease;
+          opacity: 0;
+
+          &.loaded {
+            opacity: 1;
+          }
+        }
+
+        &:hover img {
+          transform: scale(1.05);
+        }
+      }
+    }
+  }
+}
+
+/* Image Grid Styles */
+.image-grid-section {
+  padding: 6em 3em 3em 3em;
+  background: #f5f5f5;
+  position: relative;
+  z-index: 5;
+
+  .image-grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2em;
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+
+  .image-grid-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    &:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+    }
+
+    .image-placeholder {
+      width: 100%;
+      padding-bottom: 75%;
+      position: relative;
+      overflow: hidden;
+      background: #e0e0e0;
+
+      img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.3s ease, opacity 0.6s ease;
+        opacity: 0;
+
+        &.loaded {
+          opacity: 1;
+        }
+      }
+
+      &:hover img {
+        transform: scale(1.05);
+      }
     }
   }
 }

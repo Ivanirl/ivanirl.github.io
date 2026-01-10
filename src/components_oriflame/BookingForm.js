@@ -17,7 +17,7 @@ const BookingForm = () => {
   const [bookedDates, setBookedDates] = useState([]);
   const [showSuccess, setShowSuccess] = useState(false);
 
-  // Fetch booked dates
+  // Fetch booked dates from MongoDB
   useEffect(() => {
     const fetchBookedDates = async () => {
       try {
@@ -48,7 +48,7 @@ const BookingForm = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsSubmitting(true);
-    setSubmitMessage(""); // clear old
+    setSubmitMessage("");
 
     if (!date) {
       setSubmitMessage("Please select a date");
@@ -73,7 +73,7 @@ const BookingForm = () => {
     };
 
     try {
-      // 1️⃣ Save booking
+      // 1️⃣ Save booking to MongoDB
       const bookingRes = await axios.post(
         `${API_BASE_URL}/api/bookings`,
         bookingData,
@@ -87,7 +87,7 @@ const BookingForm = () => {
       // Update booked dates locally
       setBookedDates((prev) => [...prev, date]);
 
-      // 2️⃣ Send email
+      // 2️⃣ Send email notification
       const emailRes = await axios.post(
         `${API_BASE_URL}/api/send-email`,
         {
@@ -122,7 +122,8 @@ const BookingForm = () => {
       }, 5000);
     } catch (error) {
       console.error("Booking failed:", error.message);
-      setSubmitMessage(`Failed to submit booking: ${error.message}`);
+      const errorMsg = error.response?.data?.error || error.message;
+      setSubmitMessage(`Failed to submit booking: ${errorMsg}`);
     } finally {
       setIsSubmitting(false);
     }
@@ -168,7 +169,6 @@ const BookingForm = () => {
         </div>
 
         <div className="form-group" id="last">
-          {" "}
           {submitMessage && !showSuccess && (
             <div className="error-message">{submitMessage}</div>
           )}

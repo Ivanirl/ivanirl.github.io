@@ -1,6 +1,5 @@
-@use "./base" as *;
-
-@use"./mixin" as *;
-@use"./smallScreen" as *;
-@use"./largerScreen" as *;
+@import "./mixin";
+@import "./base";
+@import "./smallScreen";
+@import "./largerScreen";
 

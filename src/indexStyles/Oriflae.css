@@ -1,9 +1,47 @@
+/* Smooth initial load: hide until JS sets `is-loaded` to avoid flash/jank */
+html:not(.is-loaded) body {
+  opacity: 0;
+  transform: translateY(6px);
+  transition: opacity 360ms cubic-bezier(0.2, 0.8, 0.2, 1), transform 360ms cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+html.is-loaded body {
+  opacity: 1;
+  transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html:not(.is-loaded) body,
+  html.is-loaded body {
+    transition: none !important;
+    transform: none !important;
+    opacity: 1 !important;
+  }
+}
+/* Responsive font sizing */
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+@media (max-width: 900px) {
+  html {
+    font-size: 15px;
+  }
+}
+@media (max-width: 600px) {
+  html {
+    font-size: 14px;
+  }
+}
 * {
   font-family: "Centra", sans-serif !important;
   box-sizing: border-box;
   list-style: none;
   color: rgb(37, 37, 37);
   transition: all 0.2s ease;
+  margin: 0;
+  padding: 0;
 }
 
 h1,
@@ -24,6 +62,14 @@ body {
   scroll-behavior: smooth;
   transition: ease 0.2s;
   font-size: 0.8em;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
 }
 
 a {
@@ -34,16 +80,19 @@ a {
   font-family: Centra;
   src: url(../Resources/font/CentraNo2-Bold.ttf);
   font-weight: 100;
+  font-display: swap;
 }
 @font-face {
   font-family: Centra;
   src: url(../Resources/font/CentraNo2-Medium.ttf);
   font-weight: 200;
+  font-display: swap;
 }
 @font-face {
   font-family: Centra;
   src: url(../Resources/font/CentraNo2-Book.ttf);
   font-weight: 300;
+  font-display: swap;
 }
 .Nav {
   padding: 1em 6.5em;
@@ -386,7 +435,7 @@ button {
 }
 .BigCaro .rootbeer h1 span {
   font-size: 0.8em;
-  color: pink;
+  color: yellow;
   text-align: center;
 }
 .BigCaro .rootbeer .wrap {
@@ -412,7 +461,7 @@ button {
   display: flex;
   font-weight: 100;
   font-size: 1.2em;
-  color: pink;
+  color: yellow;
   text-shadow: 1px 1px 4px rgb(107, 107, 107);
   margin: 0;
 }
@@ -425,6 +474,26 @@ button {
   box-shadow: 1px 1px 4px #2b2b2b;
 }
 
+/* Generic reveal-on-scroll utility */
+.reveal {
+  opacity: 0;
+  transform: translateY(18px) scale(0.995);
+  transition: opacity 520ms cubic-bezier(0.2, 0.85, 0.25, 1), transform 520ms cubic-bezier(0.2, 0.85, 0.25, 1);
+  will-change: opacity, transform;
+}
+
+.reveal.in-view {
+  opacity: 1;
+  transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal, .reveal.in-view {
+    transition: none !important;
+    transform: none !important;
+    opacity: 1 !important;
+  }
+}
 .LinkBar {
   background: #f7f7f7;
   box-shadow: 1px 1px 1px #e7e7e7;
@@ -1335,7 +1404,127 @@ button {
   font-size: 1.8em;
 }
 
+/* Split with Grid Wrapper */
+.split-with-grid-wrapper {
+  position: relative;
+}
+
+/* Floating Images Container */
+.floating-images-container {
+  position: relative;
+  height: 0;
+  z-index: 10;
+  pointer-events: none;
+}
+.floating-images-container .floating-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2em;
+  padding: 0 3em;
+  max-width: 1000px;
+  margin: 0 auto;
+  position: relative;
+  top: -12em;
+  pointer-events: auto;
+}
+.floating-images-container .floating-grid .floating-image-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.floating-images-container .floating-grid .floating-image-item:hover {
+  transform: translateY(-12px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.25);
+}
+.floating-images-container .floating-grid .floating-image-item .image-placeholder {
+  width: 100%;
+  padding-bottom: 75%;
+  position: relative;
+  overflow: hidden;
+  background: #e0e0e0;
+}
+.floating-images-container .floating-grid .floating-image-item .image-placeholder img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  transition: transform 0.3s ease, opacity 0.6s ease;
+  opacity: 0;
+}
+.floating-images-container .floating-grid .floating-image-item .image-placeholder img.loaded {
+  opacity: 1;
+}
+.floating-images-container .floating-grid .floating-image-item .image-placeholder:hover img {
+  transform: scale(1.05);
+}
+
+/* Image Grid Styles */
+.image-grid-section {
+  padding: 6em 3em 3em 3em;
+  background: #f5f5f5;
+  position: relative;
+  z-index: 5;
+}
+.image-grid-section .image-grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2em;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+.image-grid-section .image-grid-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.image-grid-section .image-grid-item:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+.image-grid-section .image-grid-item .image-placeholder {
+  width: 100%;
+  padding-bottom: 75%;
+  position: relative;
+  overflow: hidden;
+  background: #e0e0e0;
+}
+.image-grid-section .image-grid-item .image-placeholder img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  transition: transform 0.3s ease, opacity 0.6s ease;
+  opacity: 0;
+}
+.image-grid-section .image-grid-item .image-placeholder img.loaded {
+  opacity: 1;
+}
+.image-grid-section .image-grid-item .image-placeholder:hover img {
+  transform: scale(1.05);
+}
+
 @media only screen and (max-width: 530px) {
+  * {
+    font-size: 0.9em;
+  }
+  html {
+    scroll-behavior: auto;
+  }
+  body {
+    font-size: 0.75em;
+    padding: 0;
+    margin: 0;
+  }
   .NavBar {
     padding: 1em 1em;
     display: none;
@@ -1400,7 +1589,7 @@ button {
     display: none;
   }
   .Nav {
-    padding: 0.5em 3.1em;
+    padding: 0.5em 1em;
     padding-bottom: 0;
     display: block;
     position: fixed;
@@ -1426,6 +1615,7 @@ button {
   }
   .Nav .container .float .sololink {
     font-weight: 100;
+    font-size: 0.8em;
   }
   .Nav .container .float .logo {
     padding: 0;
@@ -1434,70 +1624,34 @@ button {
     align-items: center;
   }
   .Nav .container .float .logo .logoimage {
-    height: 3em;
-    zoom: 1.3;
-    margin: 0.7em 0;
+    height: 2em;
+    zoom: 1;
+    margin: 0.5em 0;
   }
   .Nav .container .closedNav {
     cursor: pointer;
     color: rgb(37, 37, 37);
     display: flex;
-    gap: 3em;
+    gap: 1em;
     font-weight: lighter;
     padding: 0;
     justify-content: left;
     align-items: center;
+    font-size: 0.9em;
   }
   .Nav .container .getstarted {
     display: none;
-    align-items: center;
-    gap: 1.5em;
-    transition: ease-in-out 2s;
-  }
-  .Nav .container .getstarted .getStarted {
-    width: -moz-fit-content;
-    width: fit-content;
-    font-weight: bold;
-    padding: 0.9em 2.1em;
-    font-size: 1em;
-    border: solid rgb(91, 92, 92) 1.8px;
-    background: none;
-    border-radius: 10px;
-    cursor: pointer;
-    transition: ease-in-out 0.2s;
-    font-weight: lighter;
-    border: none;
-    transition: linear 0.2s;
-    opacity: 0.7;
-  }
-  .Nav .container .getstarted .getStarted:hover {
-    opacity: 1;
-    color: black;
-    background: rgb(222, 225, 228);
-  }
-  .Nav .container .getstarted .getStarted:active {
-    opacity: 1;
-    color: white;
-    background: none;
-  }
-  .Nav .container .getstarted .getStarted:hover {
-    opacity: 1;
-    color: rgb(37, 37, 37);
-    background: none;
   }
   .Nav .mens {
     display: block;
-  }
-  .Nav .mens:hover .ops {
-    height: 4px;
   }
   .Nav .womens {
     display: none;
   }
   .banner {
     background-color: rgb(1, 145, 145);
-    padding: 1em 0.5em;
-    font-size: 1.1em;
+    padding: 1.5em 0.5em;
+    font-size: 0.9em;
     font-weight: 200;
     position: relative;
   }
@@ -1505,21 +1659,26 @@ button {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding-top: 2.5em;
+    padding-top: 1.5em;
+    flex-direction: column;
   }
   .banner .cont span {
     color: #f5f5f5;
     text-align: center;
+    font-size: 0.85em;
+    line-height: 1.3;
   }
   .banner .cont button {
     display: flex;
     align-items: center;
-    position: absolute;
-    top: 5px;
-    right: 40%;
+    position: relative;
+    margin-top: 0.5em;
   }
   .banner .cont button svg {
-    scale: 0.5;
+    scale: 0.4;
+  }
+  .oho {
+    padding-top: 5em;
   }
   .BigCaro {
     position: relative;
@@ -1528,67 +1687,153 @@ button {
   }
   .BigCaro img {
     width: 100%;
-  }
-  .BigCaro button {
-    color: #f8f8f8;
-    opacity: 0.6;
-    width: -moz-fit-content;
-    width: fit-content;
-    font-weight: 200;
-    padding: 0.9em 2.7em;
-    font-size: 1.2em;
-    border: none;
-    background: rgb(82, 82, 82);
-    border-radius: 10px;
-    cursor: pointer;
-    transition: ease-in-out 0.2s;
-    scale: 1;
-  }
-  .BigCaro button:hover {
-    opacity: 0.7;
-    color: rgb(255, 255, 255);
-    background: rgb(49, 49, 49);
-  }
-  .BigCaro button:active {
-    opacity: 1;
-    color: rgb(32, 32, 32);
-    background: none;
+    height: auto;
+    display: block;
   }
   .BigCaro .rootbeer {
     position: absolute;
-    top: 12.2em;
-    left: 56em;
-    padding: 2em;
-    padding-top: 8px;
+    top: 30%;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 1.5em;
     display: flex;
     flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 90%;
   }
   .BigCaro .rootbeer h1 {
     font-weight: 100;
     margin: 0;
-    font-size: 5em;
-    line-height: 90%;
+    font-size: 2em;
+    line-height: 100%;
     color: #e7e7e7;
-    text-shadow: 1px 1px 5px #3b3b3b;
+    text-shadow: 1px 1px 3px #3b3b3b;
   }
   .BigCaro .rootbeer span {
-    cursor: default;
-    font-size: 1.3em;
+    font-size: 0.9em;
     margin-top: 0.5em;
     color: #e7e7e7;
-    text-shadow: 1px 1px 4px #2b2b2b;
+    text-shadow: 1px 1px 2px #2b2b2b;
+  }
+  .BigCaro .rootbeer .wrap {
+    width: 100%;
+  }
+  .BigCaro .rootbeer .bot {
+    font-size: 0.8em;
+    margin-top: 1em;
+    flex-direction: column;
+    gap: 0.5em;
+  }
+  .BigCaro .rootbeer .bot span {
+    position: static;
+    display: block;
+    font-size: 0.85em;
   }
   .BigCaro .rootbeer button {
-    margin-top: 2em;
+    margin-top: 1.2em;
+    padding: 0.6em 1.2em;
+    font-size: 0.9em;
     font-weight: 100;
     color: #3d3d3d;
     background-color: white;
-    box-shadow: 1px 1px 4px #2b2b2b;
+    box-shadow: 1px 1px 3px #2b2b2b;
+  }
+  .BigSplit {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5em;
+    padding: 2em 1em;
+  }
+  .BigSplit img {
+    width: 100%;
+    height: auto;
+    order: -1;
+  }
+  .BigSplit .bgcircle {
+    display: none;
+  }
+  .BigSplit .RightBoy {
+    width: 100%;
+    text-align: center;
+  }
+  .BigSplit .RightBoy h1 {
+    font-size: 1.8em;
+    margin: 0 0 1em 0;
+    font-weight: 200;
+  }
+  .BigSplit .RightBoy h1 span {
+    display: block;
+    font-size: 0.9em;
+    margin-top: 0.5em;
+  }
+  .BigSplit .RightBoy button {
+    padding: 0.6em 1.2em;
+    font-size: 0.9em;
+  }
+  .wnsection {
+    padding: 2em 1em;
+  }
+  .wnsection .header {
+    gap: 1em;
+  }
+  .wnsection .header h1 {
+    font-size: 1.5em;
+  }
+  .wnsection .header button {
+    font-size: 0.8em;
+    padding: 0.5em 1em;
+  }
+  .wnsection .header span {
+    font-size: 0.8em;
+  }
+  .wnsection .header span br {
+    display: none;
+  }
+  .wnsection .showcase {
+    gap: 1em;
+    flex-direction: column;
+  }
+  .wnsection .showcase .imgCont {
+    width: 100%;
+  }
+  .wnsection .showcase .imgCont img {
+    width: 100%;
+    height: auto;
+  }
+  .wnsection .showcase .imgCont button {
+    padding: 0.6em 1.2em;
+    font-size: 0.9em;
+  }
+  .showgreen {
+    right: 1.5em;
+    bottom: 2em;
+    width: 45px;
+    height: 45px;
+  }
+  button {
+    font-size: 0.9em;
+    padding: 0.6em 1em;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-size: 0.95em;
+  }
+  .themebutton1 {
+    padding: 0.6em 1.2em;
+    font-size: 0.85em;
   }
 }
 @media only screen and (max-width: 1236px) {
+  * {
+    font-size: 0.95em;
+  }
+  body {
+    font-size: 0.85em;
+  }
   .NavBar {
-    padding: 1em 3.1em;
+    padding: 1em 2em;
     display: flex;
     position: fixed;
     width: 100%;
@@ -1602,14 +1847,14 @@ button {
     width: 100%;
     justify-content: space-between;
     padding: 0 0.2em;
-    padding-bottom: 1.1em;
+    padding-bottom: 0.8em;
   }
   .NavBar .container .rightboy {
     display: flex;
     width: 100%;
     justify-content: space-between;
     align-items: center;
-    gap: 13em;
+    gap: 8em;
   }
   .NavBar .container .rightboy .logo {
     padding: 0;
@@ -1618,12 +1863,11 @@ button {
     align-items: center;
   }
   .NavBar .container .rightboy .logo .logoimage {
-    width: 1em;
+    width: 1.2em;
+    height: auto;
   }
   .NavBar .container .closedNav {
     display: none;
-    font-weight: lighter;
-    text-shadow: 4px 3px 5px rgb(0, 0, 0);
   }
   .NavBar .container .navigation {
     z-index: 900000000000000;
@@ -1634,10 +1878,10 @@ button {
     position: fixed;
     top: -1em;
     right: 0;
-    gap: 10em;
+    gap: 8em;
     flex-direction: column;
     background: #8d8d8d;
-    padding: 2em;
+    padding: 1.5em;
     padding-top: 0;
     height: 100%;
     width: 100%;
@@ -1645,10 +1889,186 @@ button {
   .NavBar .container .navigation .womens {
     display: inline-block;
     position: absolute;
-    top: 2em;
-    right: 4em;
+    top: 1.5em;
+    right: 3em;
   }
   .NavBar .container .getstarted {
     display: none;
   }
+  .Nav {
+    padding: 0.8em 3em;
+  }
+  .Nav .container {
+    padding: 0 3em;
+  }
+  .Nav .container .float .logo .logoimage {
+    height: 2.2em;
+    zoom: 1;
+  }
+  .Nav .container .getstarted {
+    gap: 1.2em;
+  }
+  .banner {
+    padding: 0.8em 2em;
+    font-size: 0.95em;
+  }
+  .banner .cont span {
+    font-size: 0.9em;
+  }
+  .banner .cont button svg {
+    scale: 0.45;
+  }
+  .oho {
+    padding-top: 6.5em;
+  }
+  .BigCaro img {
+    width: 100%;
+    height: auto;
+  }
+  .BigCaro .rootbeer {
+    top: 6em;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    padding: 1.5em;
+    text-align: center;
+  }
+  .BigCaro .rootbeer h1 {
+    font-size: 3.5em;
+    line-height: 100%;
+  }
+  .BigCaro .rootbeer span {
+    font-size: 1.1em;
+  }
+  .BigCaro .rootbeer .wrap {
+    width: 100%;
+  }
+  .BigCaro .rootbeer .bot {
+    flex-direction: column;
+    gap: 0.8em;
+    padding-right: 0;
+  }
+  .BigCaro .rootbeer .bot span {
+    position: static;
+    display: block;
+    font-size: 0.95em;
+  }
+  .BigCaro .rootbeer button {
+    padding: 0.7em 1.5em;
+    font-size: 0.95em;
+  }
+  .BigSplit {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2em;
+    padding: 3em 2em;
+    align-items: center;
+  }
+  .BigSplit img {
+    width: 100%;
+    height: auto;
+  }
+  .BigSplit .bgcircle {
+    display: none;
+  }
+  .BigSplit .RightBoy {
+    padding: 0 2em;
+  }
+  .BigSplit .RightBoy h1 {
+    font-size: 2.2em;
+    margin: 0 0 1.2em 0;
+  }
+  .BigSplit .RightBoy h1 span {
+    display: block;
+    font-size: 0.9em;
+    margin-top: 0.6em;
+  }
+  .BigSplit .RightBoy button {
+    padding: 0.7em 1.8em;
+    font-size: 0.95em;
+  }
+  .wnsection {
+    padding: 2.5em 2em;
+  }
+  .wnsection .header h1 {
+    font-size: 1.8em;
+  }
+  .wnsection .header button {
+    padding: 0.6em 1.3em;
+    font-size: 0.85em;
+  }
+  .wnsection .header span {
+    font-size: 0.85em;
+  }
+  .wnsection .header span br {
+    display: none;
+  }
+  .wnsection .showcase {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5em;
+  }
+  .wnsection .showcase .imgCont img {
+    width: 100%;
+    height: auto;
+  }
+  .wnsection .showcase .imgCont button {
+    padding: 0.6em 1.2em;
+    font-size: 0.85em;
+  }
+  .showgreen {
+    right: 3em;
+    bottom: 2.5em;
+    width: 48px;
+    height: 48px;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-size: 0.98em;
+  }
+  .themebutton1 {
+    padding: 0.65em 1.4em;
+    font-size: 0.9em;
+  }
+  .olodo {
+    font-size: 0.95em;
+  }
 }/*# sourceMappingURL=Oriflae.css.map */
+
+/* Theme toggle button */
+.theme-toggle {
+  position: fixed;
+  left: 16px;
+  bottom: 20px;
+  z-index: 99999;
+  width: 48px;
+  height: 48px;
+  border-radius: 999px;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #ffffff;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+  cursor: pointer;
+  transition: transform 0.18s ease, background 0.18s ease;
+}
+.theme-toggle:active { transform: scale(0.96); }
+.theme-toggle svg { display: block; }
+
+/* Dark mode overrides */
+body.dark-mode {
+  background: #0b0b0c;
+  color: #f6f3e8;
+}
+body.dark-mode .image-grid-section { background: #0f0f10; }
+body.dark-mode .floating-images-container .floating-grid .floating-image-item {
+  box-shadow: 0 8px 30px rgba(0,0,0,0.6);
+}
+body.dark-mode .image-grid-section .image-grid-item { box-shadow: 0 6px 20px rgba(0,0,0,0.5); }
+body.dark-mode a, body.dark-mode button { color: #fff; }
+body.dark-mode .showgreen svg rect { fill: #fff; }
+body.dark-mode .theme-toggle { background: #121212; box-shadow: 0 6px 22px rgba(0,0,0,0.6); }
+
+/* Accent highlights */
+:root { --accent: #f5f5f5; }
+body.dark-mode { --accent: #FFD54F; }

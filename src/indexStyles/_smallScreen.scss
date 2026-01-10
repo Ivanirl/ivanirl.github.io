@@ -1,6 +1,20 @@
-@use './mixin' as *;
+@import "./mixin";
 
 @media only screen and (max-width: 530px) {
+  * {
+    font-size: 0.9em;
+  }
+
+  html {
+    scroll-behavior: auto;
+  }
+
+  body {
+    font-size: 0.75em;
+    padding: 0;
+    margin: 0;
+  }
+
   .NavBar {
     padding: 1em 1em;
     display: none;
@@ -19,7 +33,6 @@
       justify-content: space-between;
       padding: 0 0em;
       padding-bottom: 1.1em;
-      //border-bottom: solid rgb(156, 156, 156) 1px;
 
       .rightboy {
         display: flex;
@@ -76,7 +89,7 @@
   }
 
   .Nav {
-    padding: 0.5em 3.1em;
+    padding: 0.5em 1em;
     padding-bottom: 0;
     display: block;
     position: fixed;
@@ -103,6 +116,7 @@
 
         .sololink {
           font-weight: 100;
+          font-size: 0.8em;
         }
 
         .logo {
@@ -112,9 +126,9 @@
           align-items: center;
 
           .logoimage {
-            height: 3em;
-            zoom: 1.3;
-            margin: 0.7em 0;
+            height: 2em;
+            zoom: 1;
+            margin: 0.5em 0;
           }
         }
       }
@@ -123,42 +137,21 @@
         cursor: pointer;
         color: rgb(37, 37, 37);
         display: flex;
-        gap: 3em;
+        gap: 1em;
         font-weight: lighter;
         padding: 0;
         justify-content: left;
         align-items: center;
+        font-size: 0.9em;
       }
 
       .getstarted {
         display: none;
-        align-items: center;
-        gap: 1.5em;
-        transition: ease-in-out 2s;
-
-        .getStarted {
-          @include baton();
-          font-weight: lighter;
-          border: none;
-          transition: linear 0.2s;
-          opacity: 0.7;
-
-          &:hover {
-            opacity: 1;
-            color: rgb(37, 37, 37);
-            background: none;
-          }
-        }
       }
     }
 
     .mens {
       display: block;
-      &:hover {
-        .ops {
-          height: 4px;
-        }
-      }
     }
 
     .womens {
@@ -167,76 +160,212 @@
   }
 
   .banner {
-  background-color: rgb(1, 145, 145);
-  padding: 1em 0.5em;
-  font-size: 1.1em;
-  font-weight: 200;
-  position: relative;
-  .cont {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding-top: 2.5em;
-    span {
-      color: #f5f5f5;
-      text-align: center;
-    }
-    button {
+    background-color: rgb(1, 145, 145);
+    padding: 1.5em 0.5em;
+    font-size: 0.9em;
+    font-weight: 200;
+    position: relative;
+
+    .cont {
       display: flex;
       align-items: center;
-      position: absolute;
-      top: 5px;
-      right: 40%;
-      svg {
-        scale: 0.5;
+      justify-content: center;
+      padding-top: 1.5em;
+      flex-direction: column;
+
+      span {
+        color: #f5f5f5;
+        text-align: center;
+        font-size: 0.85em;
+        line-height: 1.3;
+      }
+
+      button {
+        display: flex;
+        align-items: center;
+        position: relative;
+        margin-top: 0.5em;
+
+        svg {
+          scale: 0.4;
+        }
       }
     }
   }
-}
 
-.BigCaro {
-  position: relative;
-  max-height: min-content;
-  img {
-    width: 100%;
-    //height: 50em;
-  }
-  button {
-    @include signupbutton;
-    scale: 1;
+  .oho {
+    padding-top: 5em;
   }
 
-  .rootbeer {
-    position: absolute;
-    top: 12.2em;
-    left: 56em;
-    padding: 2em;
-    padding-top: 8px;
+  .BigCaro {
+    position: relative;
+    max-height: min-content;
+
+    img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .rootbeer {
+      position: absolute;
+      top: 30%;
+      left: 50%;
+      transform: translateX(-50%);
+      padding: 1.5em;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      width: 90%;
+
+      h1 {
+        font-weight: 100;
+        margin: 0;
+        font-size: 2em;
+        line-height: 100%;
+        color: #e7e7e7;
+        text-shadow: 1px 1px 3px #3b3b3b;
+      }
+
+      span {
+        font-size: 0.9em;
+        margin-top: 0.5em;
+        color: #e7e7e7;
+        text-shadow: 1px 1px 2px #2b2b2b;
+      }
+
+      .wrap {
+        width: 100%;
+      }
+
+      .bot {
+        font-size: 0.8em;
+        margin-top: 1em;
+        flex-direction: column;
+        gap: 0.5em;
+
+        span {
+          position: static;
+          display: block;
+          font-size: 0.85em;
+        }
+      }
+
+      button {
+        margin-top: 1.2em;
+        padding: 0.6em 1.2em;
+        font-size: 0.9em;
+        font-weight: 100;
+        color: #3d3d3d;
+        background-color: white;
+        box-shadow: 1px 1px 3px #2b2b2b;
+      }
+    }
+  }
+
+  .BigSplit {
+    position: relative;
     display: flex;
     flex-direction: column;
+    align-items: center;
+    gap: 1.5em;
+    padding: 2em 1em;
 
-    h1 {
-      font-weight: 100;
-      margin: 0;
-      font-size: 5em;
-      line-height: 90%;
-      color: #e7e7e7;
-      text-shadow: 1px 1px 5px #3b3b3b;
+    img {
+      width: 100%;
+      height: auto;
+      order: -1;
     }
-    span {
-      cursor: default;
-      font-size: 1.3em;
-      margin-top: 0.5em;
-      color: #e7e7e7;
-      text-shadow: 1px 1px 4px #2b2b2b;
+
+    .bgcircle {
+      display: none;
     }
-    button {
-      margin-top: 2em;
-      font-weight: 100;
-      color: #3d3d3d;
-      background-color: white;
-      box-shadow: 1px 1px 4px #2b2b2b;
+
+    .RightBoy {
+      width: 100%;
+      text-align: center;
+
+      h1 {
+        font-size: 1.8em;
+        margin: 0 0 1em 0;
+        font-weight: 200;
+
+        span {
+          display: block;
+          font-size: 0.9em;
+          margin-top: 0.5em;
+        }
+      }
+
+      button {
+        padding: 0.6em 1.2em;
+        font-size: 0.9em;
+      }
     }
   }
-}
+
+  .wnsection {
+    padding: 2em 1em;
+
+    .header {
+      gap: 1em;
+
+      h1 {
+        font-size: 1.5em;
+      }
+
+      button {
+        font-size: 0.8em;
+        padding: 0.5em 1em;
+      }
+
+      span {
+        font-size: 0.8em;
+        br {
+          display: none;
+        }
+      }
+    }
+
+    .showcase {
+      gap: 1em;
+      flex-direction: column;
+
+      .imgCont {
+        width: 100%;
+
+        img {
+          width: 100%;
+          height: auto;
+        }
+
+        button {
+          padding: 0.6em 1.2em;
+          font-size: 0.9em;
+        }
+      }
+    }
+  }
+
+  .showgreen {
+    right: 1.5em;
+    bottom: 2em;
+    width: 45px;
+    height: 45px;
+  }
+
+  button {
+    font-size: 0.9em;
+    padding: 0.6em 1em;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-size: 0.95em;
+  }
+
+  .themebutton1 {
+    padding: 0.6em 1.2em;
+    font-size: 0.85em;
+  }
 }
