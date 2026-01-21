@@ -2,6 +2,7 @@ import herobiggy from "../Resources/Jor-DSC00727-Edit.jpg";
 import { useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import Split from "../components_oriflame/SplitBanner"
 
 export default function Carousel() {
   const texts = ["Web Developer?", "App Developer?","Videographer?", "Video Editor?", "Photo Editor?"];
@@ -54,6 +55,7 @@ export default function Carousel() {
           <span>Get access to a wide variety of digital services today.</span>
           <button onClick={movey}>BOOK A CALL NOW</button>
         </div>
+        <Split/>
       </div>
     </div>
   );

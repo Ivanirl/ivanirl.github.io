@@ -372,7 +372,6 @@ button {
   position: relative;
   max-height: -moz-min-content;
   max-height: min-content;
-  border-radius: 10em;
 }
 .BigCaro img {
   width: 100%;
@@ -490,7 +489,8 @@ button {
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .reveal, .reveal.in-view {
+  .reveal,
+  .reveal.in-view {
     transition: none !important;
     transform: none !important;
     opacity: 1 !important;
@@ -802,11 +802,12 @@ button {
   display: flex;
   padding: 4em 0 4em;
   position: relative;
+  margin-top: 14em;
 }
 .BigSplit .bgcircle {
-  z-index: 1;
+  z-index: -2;
   position: absolute;
-  bottom: -6em;
+  bottom: -14em;
   left: -15em;
   opacity: 0.3;
   width: 30em;
@@ -819,25 +820,48 @@ button {
      object-fit: cover;
   -o-object-position: top;
      object-position: top;
-  width: 55em;
-  height: 30em;
-  z-index: 900;
+  width: 65em;
+  height: 50em;
+  border-radius: 1em;
+  margin-right: 0;
+  z-index: -1;
 }
 .BigSplit .RightBoy {
-  background: #ebebeb;
+  background: none;
   width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: left;
-  padding: 5em 0 0 5em;
+  padding: 8em 0 0 0;
+  margin-left: 2em;
 }
 .BigSplit .RightBoy h1 {
   text-align: left;
-  font-size: 2.7em;
+  font-size: 5em;
+  margin-bottom: 0;
 }
 .BigSplit .RightBoy h1 span {
+  color: #68b591;
   text-align: left;
   display: block;
+}
+.BigSplit .RightBoy .bot {
+  position: relative;
+  display: flex;
+  font-size: 1.2em;
+  gap: 10px;
+  margin-top: 1em;
+  justify-content: start;
+  cursor: default;
+  color: #e7e7e7;
+  text-shadow: 1px 1px 6px #1c1c1c;
+  text-align: left;
+}
+.BigSplit .RightBoy .buttonHolder {
+  margin: 0;
+  display: flex;
+  gap: 20px;
+  padding: 0;
 }
 .BigSplit .RightBoy button {
   width: -moz-fit-content;
@@ -850,6 +874,8 @@ button {
   border-radius: 10px;
   cursor: pointer;
   transition: ease-in-out 0.2s;
+  background-color: #68b591;
+  opacity: 0.8;
 }
 .BigSplit .RightBoy button:hover {
   opacity: 1;

@@ -1,12 +1,12 @@
 import { useNavigate } from "react-router-dom";
-import split from "../Resources/Jor-DSC00689-Edit.jpg";
+import split from "../Resources/ShowcaseForSafenest.png";
 
 export default function Split() {
   const navigate = useNavigate();
 
-  const move= ()=>{
-    navigate("./filler")
-  }
+  const move = () => {
+    navigate("./filler");
+  };
 
   return (
     <div className="BigSplit">
@@ -14,9 +14,20 @@ export default function Split() {
       <img src={split} />
       <div className="RightBoy">
         <h1>
-          Creating Digital stories<span>One Frame At A Time</span>
+          SafeNest.<span>Protect Your Kids.</span>
         </h1>
-        <button onClick={move} className="themebutton1">BOOK A CALL</button>
+        <span className="bot">
+          With SafeNest you can keep track <br></br>of your children and make sure they are safe.
+        </span>
+
+        <div className="buttonHolder">
+          <button onClick={move} className="themebutton1">
+            APP STORE
+          </button>
+          <button onClick={move} className="themebutton2">
+            PLAY STORE
+          </button>
+        </div>
       </div>
     </div>
   );

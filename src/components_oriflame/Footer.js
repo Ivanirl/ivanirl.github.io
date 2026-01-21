@@ -11,7 +11,7 @@ export default function Footer() {
       >
         <div className="right">
           <ul className="vought1">
-            <span>LOXY VISUALS</span>
+            <span>IVAN EZEH</span>
             <li>Support center</li>
             <li>View our free dates</li>
             <li>Returns and Claims</li>
@@ -19,14 +19,13 @@ export default function Footer() {
           <ul className="vought2">
             <span>CORPORATE INFO</span>
             <li>Work With Us</li>
-            <li>About LoxyVisuals</li>
-            <li>Sustainablility</li>
+            <li>About IVAN EZEH</li>
             <li>Investor Relations</li>
           </ul>
           <ul className="vought3">
             <span>DISCOVER</span>
             <li>Partnership Oportunities</li>
-            <li>Our Catalogue</li>
+            <li>My Catalogue</li>
           </ul>
         </div>
       </motion.div>
@@ -38,15 +37,16 @@ export default function Footer() {
       >
         <div className="float">
           <span className="topDawg">
-            LoxyVisuals is a photography and videography brand that prioritizes
-            providing the best digital <br></br>experience for all customers. We have a
-            large national presence, of which we are one of the market
-            leaders.<br></br> LoxyVisuals has its origin in Enugu state, Nigeria with
-            corporate offices in Lagos, Nigeria.We offer a wide range<br></br> 
-            of high-quality services with the singular goal of providing a
-            timeless eexperience and capturing memories.
+            IVAN EZEH is a digital service brand that prioritizes providing the
+            best digital <br></br>experience for all customers. We have a large
+            national presence, of which we are one of the market leaders.
+            <br></br> IVAN EZEH has its origin in Enugu state.We offer a wide
+            range
+            of high-quality digital services with the goal of <br></br>providing high
+            quality digital services from developing websites, motion graphics,
+            video editing and so much more!
           </span>
-          <span>Copyright 2025 LoxyVisuals. All rights reserved.</span>
+          <span>Copyright 2026 IVAN EZEH. All rights reserved.</span>
           <span className="u">Select Country/State</span>
         </div>
       </motion.div>
