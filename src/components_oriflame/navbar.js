@@ -1,14 +1,12 @@
 import { Link, useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
 import Logo from "../Resources/Logothree.jpg";
-import { Modal } from "react-overlays";
-import { motion } from "framer-motion";
+import lowgo from "../Resources/IVANSWORK.jpg";
 
 function NavBar() {
   const [activeLink, setActiveLink] = useState("home");
   const [scrollStage, setScrollStage] = useState(0);
   const [menuha, setMenuha] = useState(false);
-
 
   useEffect(() => {
     const onScroll = () => {
@@ -35,21 +33,24 @@ function NavBar() {
   return (
     <div
       className="Nav"
-      id={
-        scrollStage === 0
-          ? ""
-          : scrollStage === 1
-          ? "scrollo"
-          : scrollStage === 2
-          ? ""
-          : "scrollo"
-      }
     >
       <div className="container">
         <div className="float">
           <div className="logo">
             <Link to="/" onClick={() => onUpdateActiveLink("oriflame")}>
-              <img src={Logo} className="logoimage" alt="logo image" />
+              <img
+                src={
+                  scrollStage === 0
+                    ? Logo
+                    : scrollStage === 1
+                      ? lowgo
+                      : scrollStage === 2
+                        ? ""
+                        : "scrollo"
+                }
+                className="logoimage"
+                alt="logo image"
+              />
             </Link>
           </div>
         </div>

@@ -707,7 +707,7 @@ button {
   display: flex;
   padding: 4em 0 4em;
   position: relative;
-  margin-top: 14em;
+  margin-top: 13em;
   .bgcircle {
     z-index: -2;
     position: absolute;
@@ -773,7 +773,9 @@ button {
     button {
       @include baton();
       background-color: #68b591;
-      opacity: 0.8;
+      opacity: 1;
+      color: white;
+      box-shadow: 1px 2px 2px #434343;
     }
   }
 }

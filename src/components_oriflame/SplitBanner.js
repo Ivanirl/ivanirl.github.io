@@ -17,7 +17,8 @@ export default function Split() {
           SafeNest.<span>Protect Your Kids.</span>
         </h1>
         <span className="bot">
-          With SafeNest you can keep track <br></br>of your children and make sure they are safe.
+          With SafeNest you can keep track <br></br>of your children and make
+          sure they are safe.
         </span>
 
         <div className="buttonHolder">
