@@ -2,10 +2,16 @@ import herobiggy from "../Resources/Jor-DSC00727-Edit.jpg";
 import { useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import Split from "../components_oriflame/SplitBanner"
+import Split from "../components_oriflame/SplitBanner";
 
 export default function Carousel() {
-  const texts = ["Web Developer?", "App Developer?","Videographer?", "Video Editor?", "Photo Editor?"];
+  const texts = [
+    "Web Developer?",
+    "App Developer?",
+    "Videographer?",
+    "Video Editor?",
+    "Photo Editor?",
+  ];
   const [index, setIndex] = useState(0);
 
   useEffect(() => {
@@ -13,14 +19,14 @@ export default function Carousel() {
       setIndex((prev) => (prev + 1) % texts.length);
     }, 3000);
     return () => clearInterval(interval);
-  }, []);                         
+  }, []);
 
   const navigate = useNavigate();
   const move = () => {
     navigate("./filler");
   };
 
-    const navigater = useNavigate();
+  const navigater = useNavigate();
   const movey = () => {
     navigate("./filler2");
   };
@@ -55,7 +61,7 @@ export default function Carousel() {
           <span>Get access to a wide variety of digital services today.</span>
           <button onClick={movey}>BOOK A CALL NOW</button>
         </div>
-        <Split/>
+        <Split />
       </div>
     </div>
   );
