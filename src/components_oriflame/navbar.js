@@ -37,7 +37,7 @@ function NavBar() {
       <div className="container">
         <div className="float">
           <div className="logo">
-            <Link to="/" onClick={() => onUpdateActiveLink("oriflame")}>
+            <Link to="/" onClick={() => onUpdateActiveLink("")}>
               <img
                 src={
                   scrollStage === 0
