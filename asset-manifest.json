@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/ivanirl.github.io/static/css/main.7cc6f4b6.css",
+    "main.js": "/ivanirl.github.io/static/js/main.a7df324e.js",
+    "static/media/Head.JPG": "/ivanirl.github.io/static/media/Head.3adf84b9aee6567c1651.JPG",
+    "static/media/Mobile_view_assurance_crow.png": "/ivanirl.github.io/static/media/Mobile_view_assurance_crow.2e949b1cf61df41526d1.png",
+    "static/media/Jor-DSC00689-Edit.jpg": "/ivanirl.github.io/static/media/Jor-DSC00689-Edit.abc393f0e670e29e2528.jpg",
+    "static/media/ShowcaseForSafenest.png": "/ivanirl.github.io/static/media/ShowcaseForSafenest.cca5caf0be7a826ec8fd.png",
+    "static/media/Jor-DSC00727-Edit.jpg": "/ivanirl.github.io/static/media/Jor-DSC00727-Edit.49aae9c1954a466149ff.jpg",
+    "static/media/CentraNo2-Bold.ttf": "/ivanirl.github.io/static/media/CentraNo2-Bold.2faff7f7d3fc92a2fcd9.ttf",
+    "static/media/CentraNo2-Medium.ttf": "/ivanirl.github.io/static/media/CentraNo2-Medium.f94be5b326d78bb32b95.ttf",
+    "static/media/CentraNo2-Book.ttf": "/ivanirl.github.io/static/media/CentraNo2-Book.2b143fa4b734a3584043.ttf",
+    "static/media/IVANSWORK.jpg": "/ivanirl.github.io/static/media/IVANSWORK.b89c6e4f12b1a20c5de3.jpg",
+    "static/media/Logothree.jpg": "/ivanirl.github.io/static/media/Logothree.a0611a724097fa0195f5.jpg",
+    "index.html": "/ivanirl.github.io/index.html",
+    "main.7cc6f4b6.css.map": "/ivanirl.github.io/static/css/main.7cc6f4b6.css.map",
+    "main.a7df324e.js.map": "/ivanirl.github.io/static/js/main.a7df324e.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7cc6f4b6.css",
+    "static/js/main.a7df324e.js"
+  ]
+}
