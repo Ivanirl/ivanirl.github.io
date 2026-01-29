@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/ivanirl.github.io/static/css/main.7cc6f4b6.css",
-    "main.js": "/ivanirl.github.io/static/js/main.a7df324e.js",
+    "main.css": "/ivanirl.github.io/static/css/main.b711ca9e.css",
+    "main.js": "/ivanirl.github.io/static/js/main.36d5e3ef.js",
     "static/media/Head.JPG": "/ivanirl.github.io/static/media/Head.3adf84b9aee6567c1651.JPG",
     "static/media/Mobile_view_assurance_crow.png": "/ivanirl.github.io/static/media/Mobile_view_assurance_crow.2e949b1cf61df41526d1.png",
     "static/media/Jor-DSC00689-Edit.jpg": "/ivanirl.github.io/static/media/Jor-DSC00689-Edit.abc393f0e670e29e2528.jpg",
@@ -13,11 +13,11 @@
     "static/media/IVANSWORK.jpg": "/ivanirl.github.io/static/media/IVANSWORK.b89c6e4f12b1a20c5de3.jpg",
     "static/media/Logothree.jpg": "/ivanirl.github.io/static/media/Logothree.a0611a724097fa0195f5.jpg",
     "index.html": "/ivanirl.github.io/index.html",
-    "main.7cc6f4b6.css.map": "/ivanirl.github.io/static/css/main.7cc6f4b6.css.map",
-    "main.a7df324e.js.map": "/ivanirl.github.io/static/js/main.a7df324e.js.map"
+    "main.b711ca9e.css.map": "/ivanirl.github.io/static/css/main.b711ca9e.css.map",
+    "main.36d5e3ef.js.map": "/ivanirl.github.io/static/js/main.36d5e3ef.js.map"
   },
   "entrypoints": [
-    "static/css/main.7cc6f4b6.css",
-    "static/js/main.a7df324e.js"
+    "static/css/main.b711ca9e.css",
+    "static/js/main.36d5e3ef.js"
   ]
 }
