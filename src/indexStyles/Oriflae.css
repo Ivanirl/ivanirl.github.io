@@ -1550,210 +1550,6 @@ button {
   transform: scale(1.05);
 }
 
-@media only screen and (max-width: 530px) {
-  * {
-    font-size: 0.9em;
-  }
-  html {
-    scroll-behavior: auto;
-  }
-  body {
-    font-size: 0.75em;
-    padding: 0;
-    margin: 0;
-  }
-  .Nav {
-    padding: 0.5em 1em;
-    padding-bottom: 0;
-    display: block;
-    position: fixed;
-    width: 100%;
-    z-index: 100000000000;
-    background-color: yellow;
-  }
-  .Nav .container {
-    display: flex;
-    justify-content: center;
-    padding: 0 0.1em;
-    padding-right: 1em;
-    align-items: center;
-    background: pink;
-  }
-  .Nav .container .float {
-    padding: 0;
-    background: lightblue;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: auto;
-  }
-  .Nav .container .float .logo {
-    height: -moz-max-content;
-    height: max-content;
-    padding: 0;
-    padding-top: 0;
-    display: flex;
-    align-items: center;
-    height: 14em;
-  }
-  .Nav .container .float .logo .logoimage {
-    height: 10em;
-    zoom: 1.9;
-    margin: 0;
-  }
-  .oho {
-    padding-top: 5em;
-  }
-  .BigCaro {
-    position: relative;
-    max-height: -moz-min-content;
-    max-height: min-content;
-  }
-  .BigCaro img {
-    width: 100%;
-    height: auto;
-    display: block;
-  }
-  .BigCaro .rootbeer {
-    position: absolute;
-    top: 30%;
-    left: 50%;
-    transform: translateX(-50%);
-    padding: 1.5em;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    width: 90%;
-  }
-  .BigCaro .rootbeer h1 {
-    font-weight: 100;
-    margin: 0;
-    font-size: 2em;
-    line-height: 100%;
-    color: #e7e7e7;
-    text-shadow: 1px 1px 3px #3b3b3b;
-  }
-  .BigCaro .rootbeer span {
-    font-size: 0.9em;
-    margin-top: 0.5em;
-    color: #e7e7e7;
-    text-shadow: 1px 1px 2px #2b2b2b;
-  }
-  .BigCaro .rootbeer .wrap {
-    width: 100%;
-  }
-  .BigCaro .rootbeer .bot {
-    font-size: 0.8em;
-    margin-top: 1em;
-    flex-direction: column;
-    gap: 0.5em;
-  }
-  .BigCaro .rootbeer .bot span {
-    position: static;
-    display: block;
-    font-size: 0.85em;
-  }
-  .BigCaro .rootbeer button {
-    margin-top: 1.2em;
-    padding: 0.6em 1.2em;
-    font-size: 0.9em;
-    font-weight: 100;
-    color: #3d3d3d;
-    background-color: white;
-    box-shadow: 1px 1px 3px #2b2b2b;
-  }
-  .BigSplit {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1.5em;
-    padding: 2em 1em;
-  }
-  .BigSplit img {
-    width: 100%;
-    height: auto;
-    order: -1;
-  }
-  .BigSplit .bgcircle {
-    display: none;
-  }
-  .BigSplit .RightBoy {
-    width: 100%;
-    text-align: center;
-  }
-  .BigSplit .RightBoy h1 {
-    font-size: 1.8em;
-    margin: 0 0 1em 0;
-    font-weight: 200;
-  }
-  .BigSplit .RightBoy h1 span {
-    display: block;
-    font-size: 0.9em;
-    margin-top: 0.5em;
-  }
-  .BigSplit .RightBoy button {
-    padding: 0.6em 1.2em;
-    font-size: 0.9em;
-  }
-  .wnsection {
-    padding: 2em 1em;
-  }
-  .wnsection .header {
-    gap: 1em;
-  }
-  .wnsection .header h1 {
-    font-size: 1.5em;
-  }
-  .wnsection .header button {
-    font-size: 0.8em;
-    padding: 0.5em 1em;
-  }
-  .wnsection .header span {
-    font-size: 0.8em;
-  }
-  .wnsection .header span br {
-    display: none;
-  }
-  .wnsection .showcase {
-    gap: 1em;
-    flex-direction: column;
-  }
-  .wnsection .showcase .imgCont {
-    width: 100%;
-  }
-  .wnsection .showcase .imgCont img {
-    width: 100%;
-    height: auto;
-  }
-  .wnsection .showcase .imgCont button {
-    padding: 0.6em 1.2em;
-    font-size: 0.9em;
-  }
-  .showgreen {
-    right: 1.5em;
-    bottom: 2em;
-    width: 45px;
-    height: 45px;
-  }
-  button {
-    font-size: 0.9em;
-    padding: 0.6em 1em;
-  }
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    font-size: 0.95em;
-  }
-  .themebutton1 {
-    padding: 0.6em 1.2em;
-    font-size: 0.85em;
-  }
-}
 @media only screen and (max-width: 1236px) {
   * {
     font-size: 0.95em;
@@ -1960,5 +1756,173 @@ button {
   }
   .olodo {
     font-size: 0.95em;
+  }
+}
+@media only screen and (max-width: 530px) {
+  * {
+    font-size: 0.9em;
+  }
+  html {
+    scroll-behavior: auto;
+  }
+  body {
+    font-size: 0.75em;
+    padding: 0;
+    margin: 0;
+  }
+  .Nav {
+    padding: 0.5em 1em;
+    padding-bottom: 0;
+    display: block;
+    position: fixed;
+    width: 100%;
+    z-index: 100000000000;
+    background-color: white;
+  }
+  .Nav .container {
+    display: flex;
+    justify-content: center;
+    padding: 0 0.1em;
+    padding-right: 1em;
+    align-items: center;
+  }
+  .Nav .container .float {
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .Nav .container .float .logo {
+    padding: 0;
+    padding-top: 0;
+    display: flex;
+    align-items: center;
+  }
+  .Nav .container .float .logo .logoimage {
+    height: 10em;
+    zoom: 1.3;
+    padding: 1.5em;
+    margin: 0;
+  }
+  .oho {
+    padding-top: 7em;
+    margin-bottom: 60em;
+  }
+  .BigCaro {
+    position: relative;
+    max-height: -moz-min-content;
+    max-height: min-content;
+  }
+  .BigCaro img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  .BigCaro .rootbeer {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 1.5em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 90%;
+  }
+  .BigCaro .rootbeer h1 {
+    font-weight: 100;
+    margin: 0;
+    font-size: 10em;
+    line-height: 100%;
+    color: #e7e7e7;
+    text-shadow: 1px 1px 3px #3b3b3b;
+  }
+  .BigCaro .rootbeer span {
+    font-size: 2.1em;
+    margin-top: 0.5em;
+    color: #e7e7e7;
+    text-shadow: 1px 1px 2px #2b2b2b;
+  }
+  .BigCaro .rootbeer .wrap {
+    width: 100%;
+  }
+  .BigCaro .rootbeer .bot {
+    font-size: 2.1em;
+    margin-top: 1em;
+    flex-direction: column;
+    gap: 0;
+  }
+  .BigCaro .rootbeer .bot span {
+    position: static;
+    display: block;
+    font-size: 0.85em;
+  }
+  .BigCaro .rootbeer button {
+    margin-top: 1.2em;
+    padding: 0.6em 1.2em;
+    font-size: 2em;
+    font-weight: 100;
+    color: #3d3d3d;
+    background-color: white;
+    box-shadow: 1px 1px 3px #2b2b2b;
+  }
+  .BigSplit {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    gap: 1.5em;
+    padding: 2em 1em;
+    margin-top: 30em;
+  }
+  .BigSplit img {
+    width: 100%;
+    height: auto;
+    order: -1;
+  }
+  .BigSplit .bgcircle {
+    display: none;
+  }
+  .BigSplit .RightBoy {
+    width: 100%;
+    text-align: left;
+  }
+  .BigSplit .RightBoy h1 {
+    font-size: 1.8em;
+    margin: 0 0 1em 0;
+    font-weight: 200;
+  }
+  .BigSplit .RightBoy h1 span {
+    display: block;
+    font-size: 0.9em;
+    margin-top: 0.5em;
+  }
+  .BigSplit .RightBoy button {
+    padding: 0.6em 1.2em;
+    font-size: 0.9em;
+  }
+  .showgreen {
+    right: 1.5em;
+    bottom: 2em;
+    width: 45px;
+    height: 45px;
+    display: none;
+  }
+  button {
+    font-size: 0.9em;
+    padding: 0.6em 1em;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-size: 0.95em;
+  }
+  .themebutton1 {
+    padding: 0.6em 1.2em;
+    font-size: 0.85em;
   }
 }/*# sourceMappingURL=Oriflae.css.map */

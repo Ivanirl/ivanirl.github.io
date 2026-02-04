@@ -22,7 +22,7 @@
     position: fixed;
     width: 100%;
     z-index: 100000000000;
-    background-color: yellow;
+    background-color: white;
 
     .container {
       display: flex;
@@ -30,27 +30,25 @@
       padding: 0 0.1em;
       padding-right: 1em;
       align-items: center;
-      background: pink;
+     // background: pink;
 
       .float {
         padding: 0;
-        background: lightblue; 
+        //background: lightblue; 
         display: flex;
         justify-content: center;
         align-items: center;
-        width: auto;
 
         .logo {
-          height: max-content;
           padding: 0;
           padding-top: 0;
           display: flex;
           align-items: center;
-          height: 14em;
 
           .logoimage {
             height: 10em;
-            zoom: 1.9;
+            zoom: 1.3;
+            padding: 1.5em;
             margin: 0;
           }
         }
@@ -60,7 +58,8 @@
   }
 
   .oho {
-    padding-top: 5em;
+    padding-top: 7em;
+    margin-bottom: 60em;
   }
 
   .BigCaro {
@@ -88,14 +87,14 @@
       h1 {
         font-weight: 100;
         margin: 0;
-        font-size: 2em;
+        font-size: 10em;
         line-height: 100%;
         color: #e7e7e7;
         text-shadow: 1px 1px 3px #3b3b3b;
       }
 
       span {
-        font-size: 0.9em;
+        font-size: 2.1em;
         margin-top: 0.5em;
         color: #e7e7e7;
         text-shadow: 1px 1px 2px #2b2b2b;
@@ -106,10 +105,10 @@
       }
 
       .bot {
-        font-size: 0.8em;
+        font-size: 2.1em;
         margin-top: 1em;
         flex-direction: column;
-        gap: 0.5em;
+        gap: 0;
 
         span {
           position: static;
@@ -121,7 +120,7 @@
       button {
         margin-top: 1.2em;
         padding: 0.6em 1.2em;
-        font-size: 0.9em;
+        font-size: 2em;
         font-weight: 100;
         color: #3d3d3d;
         background-color: white;
@@ -134,9 +133,10 @@
     position: relative;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: left;
     gap: 1.5em;
     padding: 2em 1em;
+    margin-top: 30em;
 
     img {
       width: 100%;
@@ -150,7 +150,7 @@
 
     .RightBoy {
       width: 100%;
-      text-align: center;
+      text-align: left;
 
       h1 {
         font-size: 1.8em;
@@ -171,54 +171,13 @@
     }
   }
 
-  .wnsection {
-    padding: 2em 1em;
-
-    .header {
-      gap: 1em;
-
-      h1 {
-        font-size: 1.5em;
-      }
-
-      button {
-        font-size: 0.8em;
-        padding: 0.5em 1em;
-      }
-
-      span {
-        font-size: 0.8em;
-        br {
-          display: none;
-        }
-      }
-    }
-
-    .showcase {
-      gap: 1em;
-      flex-direction: column;
-
-      .imgCont {
-        width: 100%;
-
-        img {
-          width: 100%;
-          height: auto;
-        }
-
-        button {
-          padding: 0.6em 1.2em;
-          font-size: 0.9em;
-        }
-      }
-    }
-  }
 
   .showgreen {
     right: 1.5em;
     bottom: 2em;
     width: 45px;
     height: 45px;
+    display: none;
   }
 
   button {
