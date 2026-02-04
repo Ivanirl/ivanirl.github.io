@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/ivanirl.github.io/static/css/main.b711ca9e.css",
-    "main.js": "/ivanirl.github.io/static/js/main.36d5e3ef.js",
-    "static/media/Head.JPG": "/ivanirl.github.io/static/media/Head.3adf84b9aee6567c1651.JPG",
-    "static/media/Mobile_view_assurance_crow.png": "/ivanirl.github.io/static/media/Mobile_view_assurance_crow.2e949b1cf61df41526d1.png",
-    "static/media/Jor-DSC00689-Edit.jpg": "/ivanirl.github.io/static/media/Jor-DSC00689-Edit.abc393f0e670e29e2528.jpg",
-    "static/media/ShowcaseForSafenest.png": "/ivanirl.github.io/static/media/ShowcaseForSafenest.cca5caf0be7a826ec8fd.png",
-    "static/media/Jor-DSC00727-Edit.jpg": "/ivanirl.github.io/static/media/Jor-DSC00727-Edit.49aae9c1954a466149ff.jpg",
-    "static/media/CentraNo2-Bold.ttf": "/ivanirl.github.io/static/media/CentraNo2-Bold.2faff7f7d3fc92a2fcd9.ttf",
-    "static/media/CentraNo2-Medium.ttf": "/ivanirl.github.io/static/media/CentraNo2-Medium.f94be5b326d78bb32b95.ttf",
-    "static/media/CentraNo2-Book.ttf": "/ivanirl.github.io/static/media/CentraNo2-Book.2b143fa4b734a3584043.ttf",
-    "static/media/IVANSWORK.jpg": "/ivanirl.github.io/static/media/IVANSWORK.b89c6e4f12b1a20c5de3.jpg",
-    "static/media/Logothree.jpg": "/ivanirl.github.io/static/media/Logothree.a0611a724097fa0195f5.jpg",
-    "index.html": "/ivanirl.github.io/index.html",
-    "main.b711ca9e.css.map": "/ivanirl.github.io/static/css/main.b711ca9e.css.map",
-    "main.36d5e3ef.js.map": "/ivanirl.github.io/static/js/main.36d5e3ef.js.map"
+    "main.css": "/static/css/main.a9194e44.css",
+    "main.js": "/static/js/main.48ec6777.js",
+    "static/media/Head.JPG": "/static/media/Head.3adf84b9aee6567c1651.JPG",
+    "static/media/Mobile_view_assurance_crow.png": "/static/media/Mobile_view_assurance_crow.2e949b1cf61df41526d1.png",
+    "static/media/Jor-DSC00689-Edit.jpg": "/static/media/Jor-DSC00689-Edit.abc393f0e670e29e2528.jpg",
+    "static/media/ShowcaseForSafenest.png": "/static/media/ShowcaseForSafenest.cca5caf0be7a826ec8fd.png",
+    "static/media/Jor-DSC00727-Edit.jpg": "/static/media/Jor-DSC00727-Edit.49aae9c1954a466149ff.jpg",
+    "static/media/CentraNo2-Bold.ttf": "/static/media/CentraNo2-Bold.2faff7f7d3fc92a2fcd9.ttf",
+    "static/media/CentraNo2-Medium.ttf": "/static/media/CentraNo2-Medium.f94be5b326d78bb32b95.ttf",
+    "static/media/CentraNo2-Book.ttf": "/static/media/CentraNo2-Book.2b143fa4b734a3584043.ttf",
+    "static/media/IVANSWORK.jpg": "/static/media/IVANSWORK.b89c6e4f12b1a20c5de3.jpg",
+    "static/media/Logothree.jpg": "/static/media/Logothree.a0611a724097fa0195f5.jpg",
+    "index.html": "/index.html",
+    "main.a9194e44.css.map": "/static/css/main.a9194e44.css.map",
+    "main.48ec6777.js.map": "/static/js/main.48ec6777.js.map"
   },
   "entrypoints": [
-    "static/css/main.b711ca9e.css",
-    "static/js/main.36d5e3ef.js"
+    "static/css/main.a9194e44.css",
+    "static/js/main.48ec6777.js"
   ]
 }
