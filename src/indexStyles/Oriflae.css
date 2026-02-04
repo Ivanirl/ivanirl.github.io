@@ -600,197 +600,6 @@ button {
   background-color: #383838;
 }
 
-.wnsection {
-  margin-top: 6em;
-}
-.wnsection .header {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding-bottom: 2em;
-}
-.wnsection .header h1 {
-  letter-spacing: 1px;
-  font-size: 2.7em;
-}
-.wnsection .header button {
-  width: -moz-fit-content;
-  width: fit-content;
-  font-weight: bold;
-  padding: 0.9em 2.1em;
-  font-size: 1em;
-  border: solid rgb(91, 92, 92) 1.8px;
-  background: none;
-  border-radius: 10px;
-  cursor: pointer;
-  transition: ease-in-out 0.2s;
-  position: absolute;
-  top: 2em;
-  right: 4em;
-}
-.wnsection .header button:hover {
-  opacity: 1;
-  color: black;
-  background: rgb(255, 255, 255);
-}
-.wnsection .header button:active {
-  opacity: 1;
-  color: white;
-  background: none;
-}
-.wnsection .showcase {
-  display: flex;
-  padding: 0 3em;
-}
-.wnsection .showcase .imgCont {
-  position: relative;
-  width: 50em;
-  height: 27em;
-}
-.wnsection .showcase .imgCont img {
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: bottom 3;
-     object-position: bottom 3;
-  width: 100%;
-  height: 100%;
-}
-.wnsection .showcase .imgCont button {
-  color: #f8f8f8;
-  opacity: 0.6;
-  width: -moz-fit-content;
-  width: fit-content;
-  font-weight: 200;
-  padding: 0.9em 2.7em;
-  font-size: 1.2em;
-  border: none;
-  background: rgb(82, 82, 82);
-  border-radius: 10px;
-  cursor: pointer;
-  transition: ease-in-out 0.2s;
-  color: rgb(136, 136, 136);
-  background: rgb(236, 236, 236);
-  position: absolute;
-  left: 35%;
-  bottom: 8%;
-}
-.wnsection .showcase .imgCont button:hover {
-  opacity: 1;
-  color: rgb(255, 255, 255);
-  background: rgb(49, 49, 49);
-}
-.wnsection .showcase .imgCont button:active {
-  opacity: 1;
-  color: rgb(32, 32, 32);
-  background: none;
-}
-.wnsection .showcase .imgCont button:hover {
-  box-shadow: 2px 2px 12px #c7c7c7;
-}
-.wnsection .showcase .products {
-  display: flex;
-  margin-left: 1em;
-  gap: 1.5em;
-}
-
-.horsy {
-  margin-top: 0;
-  padding-top: 9em;
-  position: relative;
-  overflow: hidden;
-}
-.horsy .header button {
-  width: -moz-fit-content;
-  width: fit-content;
-  font-weight: bold;
-  padding: 0.9em 2.1em;
-  font-size: 1em;
-  border: solid rgb(91, 92, 92) 1.8px;
-  background: none;
-  border-radius: 10px;
-  cursor: pointer;
-  transition: ease-in-out 0.2s;
-  position: absolute;
-  top: 2em;
-  left: 5em;
-}
-.horsy .header button:hover {
-  opacity: 1;
-  color: black;
-  background: rgb(255, 255, 255);
-}
-.horsy .header button:active {
-  opacity: 1;
-  color: white;
-  background: none;
-}
-.horsy .bgcircle {
-  position: absolute;
-  top: 5em;
-  right: -4em;
-  opacity: 0.3;
-  width: 30em;
-  height: 30em;
-  border-radius: 50%;
-  background: #8d9ba8;
-}
-.horsy .showcase {
-  display: flex;
-  gap: 1.7em;
-}
-.horsy .showcase .imgCont {
-  position: relative;
-  width: 33em;
-  height: 27em;
-}
-.horsy .showcase .imgCont img {
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: bottom 3;
-     object-position: bottom 3;
-  width: 100%;
-  height: 100%;
-}
-.horsy .showcase .imgCont button {
-  color: #f8f8f8;
-  opacity: 0.6;
-  width: -moz-fit-content;
-  width: fit-content;
-  font-weight: 200;
-  padding: 0.9em 2.7em;
-  font-size: 1.2em;
-  border: none;
-  background: rgb(82, 82, 82);
-  border-radius: 10px;
-  cursor: pointer;
-  transition: ease-in-out 0.2s;
-  color: rgb(136, 136, 136);
-  background: rgb(236, 236, 236);
-  position: absolute;
-  left: 25%;
-  bottom: 8%;
-}
-.horsy .showcase .imgCont button:hover {
-  opacity: 1;
-  color: rgb(255, 255, 255);
-  background: rgb(49, 49, 49);
-}
-.horsy .showcase .imgCont button:active {
-  opacity: 1;
-  color: rgb(32, 32, 32);
-  background: none;
-}
-.horsy .showcase .imgCont button:hover {
-  box-shadow: 2px 2px 12px #c7c7c7;
-}
-.horsy .showcase .products {
-  display: flex;
-  margin-left: 1em;
-  gap: 1.5em;
-}
-
 .kross {
   width: 50px;
   height: 50px;
@@ -810,17 +619,6 @@ button {
   padding: 4em 0 4em;
   position: relative;
   margin-top: 13em;
-}
-.BigSplit .bgcircle {
-  z-index: -2;
-  position: absolute;
-  bottom: -14em;
-  left: -15em;
-  opacity: 0.3;
-  width: 30em;
-  height: 30em;
-  border-radius: 50%;
-  background: #8d9ba8;
 }
 .BigSplit img {
   -o-object-fit: cover;
@@ -1694,9 +1492,6 @@ button {
     width: 100%;
     height: auto;
   }
-  .BigSplit .bgcircle {
-    display: none;
-  }
   .BigSplit .RightBoy {
     padding: 0 2em;
   }
@@ -1806,7 +1601,7 @@ button {
   }
   .oho {
     padding-top: 7em;
-    margin-bottom: 60em;
+    margin-bottom: 65em;
   }
   .BigCaro {
     position: relative;
@@ -1868,39 +1663,90 @@ button {
     box-shadow: 1px 1px 3px #2b2b2b;
   }
   .BigSplit {
-    position: relative;
     display: flex;
     flex-direction: column;
-    align-items: left;
-    gap: 1.5em;
-    padding: 2em 1em;
-    margin-top: 30em;
+    padding: 4em 0 4em;
+    position: relative;
+    margin-top: 23em;
   }
   .BigSplit img {
-    width: 100%;
-    height: auto;
-    order: -1;
+    -o-object-fit: cover;
+       object-fit: cover;
+    -o-object-position: top;
+       object-position: top;
+    width: 65em;
+    border-radius: 1em;
+    margin-right: 0;
+    z-index: -1;
+    box-shadow: 2px 2px 9px #3b3b3b;
   }
-  .BigSplit .bgcircle {
-    display: none;
+  .BigSplit img:hover {
+    zoom: 2;
   }
   .BigSplit .RightBoy {
+    background: none;
     width: 100%;
-    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    padding: 2em 0 0 0;
   }
   .BigSplit .RightBoy h1 {
-    font-size: 1.8em;
-    margin: 0 0 1em 0;
-    font-weight: 200;
+    text-align: left;
+    font-size: 5em;
+    margin-bottom: 0;
+    color: rgb(24, 24, 24);
+    text-shadow: none;
   }
   .BigSplit .RightBoy h1 span {
+    color: #68b591;
+    text-align: left;
     display: block;
-    font-size: 0.9em;
-    margin-top: 0.5em;
+  }
+  .BigSplit .RightBoy .bot {
+    position: relative;
+    display: block;
+    font-size: 2.5em;
+    gap: 10px;
+    margin-top: 1em;
+    cursor: default;
+    color: #1d1d1d;
+    text-shadow: none;
+    text-align: left;
+  }
+  .BigSplit .RightBoy .buttonHolder {
+    margin: 0;
+    display: flex;
+    gap: 20px;
+    padding: 0;
   }
   .BigSplit .RightBoy button {
-    padding: 0.6em 1.2em;
-    font-size: 0.9em;
+    width: -moz-fit-content;
+    width: fit-content;
+    font-weight: bold;
+    padding: 0.9em 2.1em;
+    font-size: 1em;
+    border: solid rgb(91, 92, 92) 1.8px;
+    background: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: ease-in-out 0.2s;
+    font-size: 2.6em;
+    background-color: #68b591;
+    border: none;
+    opacity: 1;
+    color: white;
+    box-shadow: 1px 2px 9px #6d6d6d;
+  }
+  .BigSplit .RightBoy button:hover {
+    opacity: 1;
+    color: black;
+    background: rgb(255, 255, 255);
+  }
+  .BigSplit .RightBoy button:active {
+    opacity: 1;
+    color: white;
+    background: none;
   }
   .showgreen {
     right: 1.5em;
@@ -1925,4 +1771,7 @@ button {
     padding: 0.6em 1.2em;
     font-size: 0.85em;
   }
+}
+.theme-toggle {
+  display: none;
 }/*# sourceMappingURL=Oriflae.css.map */

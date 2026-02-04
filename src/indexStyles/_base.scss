@@ -584,117 +584,6 @@ button {
   }
 }
 
-.wnsection {
-  margin-top: 6em;
-  .header {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding-bottom: 2em;
-    h1 {
-      letter-spacing: 1px;
-      font-size: 2.7em;
-    }
-    button {
-      @include baton();
-      position: absolute;
-      top: 2em;
-      right: 4em;
-    }
-  }
-
-  .showcase {
-    display: flex;
-    padding: 0 3em;
-    .imgCont {
-      position: relative;
-      width: 50em;
-      height: 27em;
-      img {
-        object-fit: cover;
-        object-position: bottom 3;
-        width: 100%;
-        height: 100%;
-      }
-      button {
-        @include signupbutton();
-        color: rgb(136, 136, 136);
-        background: rgb(236, 236, 236);
-        position: absolute;
-        left: 35%;
-        bottom: 8%;
-        &:hover {
-          box-shadow: 2px 2px 12px #c7c7c7;
-        }
-      }
-    }
-    .products {
-      display: flex;
-      margin-left: 1em;
-      gap: 1.5em;
-    }
-  }
-}
-
-.horsy {
-  margin-top: 0;
-  padding-top: 9em;
-  position: relative;
-  overflow: hidden;
-  .header {
-    button {
-      @include baton();
-      position: absolute;
-      top: 2em;
-      left: 5em;
-    }
-  }
-
-  .bgcircle {
-    position: absolute;
-    top: 5em;
-    right: -4em;
-    opacity: 0.3;
-    width: 30em;
-    height: 30em;
-    border-radius: 50%;
-    background: #8d9ba8;
-  }
-
-  .showcase {
-    display: flex;
-    gap: 1.7em;
-    .imgCont {
-      position: relative;
-      width: 33em;
-      height: 27em;
-      img {
-        object-fit: cover;
-        object-position: bottom 3;
-        width: 100%;
-        height: 100%;
-      }
-      button {
-        @include signupbutton();
-        color: rgb(136, 136, 136);
-        background: rgb(236, 236, 236);
-        position: absolute;
-        left: 25%;
-        bottom: 8%;
-        &:hover {
-          box-shadow: 2px 2px 12px #c7c7c7;
-        }
-      }
-    }
-    .products {
-      display: flex;
-      margin-left: 1em;
-      gap: 1.5em;
-    }
-  }
-}
 
 .kross {
   width: 50px;
@@ -716,17 +605,6 @@ button {
   padding: 4em 0 4em;
   position: relative;
   margin-top: 13em;
-  .bgcircle {
-    z-index: -2;
-    position: absolute;
-    bottom: -14em;
-    left: -15em;
-    opacity: 0.3;
-    width: 30em;
-    height: 30em;
-    border-radius: 50%;
-    background: #8d9ba8;
-  }
   img {
     object-fit: cover;
     object-position: top;

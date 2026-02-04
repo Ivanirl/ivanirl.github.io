@@ -43,7 +43,6 @@ export default function Split() {
         transition={{ duration: 2, ease: [0.6, -0.05, 0.01, 0.99] }}
         className="BigSplit"
       >
-        <div className="bgcircle"></div>
         <img src={split} />
         <div className="RightBoy">
           <h1>

@@ -30,11 +30,11 @@
       padding: 0 0.1em;
       padding-right: 1em;
       align-items: center;
-     // background: pink;
+      // background: pink;
 
       .float {
         padding: 0;
-        //background: lightblue; 
+        //background: lightblue;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -53,13 +53,12 @@
           }
         }
       }
-
     }
   }
 
   .oho {
     padding-top: 7em;
-    margin-bottom: 60em;
+    margin-bottom: 65em;
   }
 
   .BigCaro {
@@ -130,47 +129,74 @@
   }
 
   .BigSplit {
-    position: relative;
     display: flex;
     flex-direction: column;
-    align-items: left;
-    gap: 1.5em;
-    padding: 2em 1em;
-    margin-top: 30em;
-
+    padding: 4em 0 4em;
+    position: relative;
+    margin-top: 23em;
     img {
-      width: 100%;
-      height: auto;
-      order: -1;
-    }
-
-    .bgcircle {
-      display: none;
+      object-fit: cover;
+      object-position: top;
+      width: 65em;
+      //height: 50em;
+      border-radius: 1em;
+      margin-right: 0;
+      z-index: -1;
+      box-shadow: 2px 2px 9px #3b3b3b;
     }
 
     .RightBoy {
+      background: none;
       width: 100%;
-      text-align: left;
+      display: flex;
+      flex-direction: column;
+      justify-content: left;
+      padding: 2em 0 0 0;
 
       h1 {
-        font-size: 1.8em;
-        margin: 0 0 1em 0;
-        font-weight: 200;
-
+        text-align: left;
+        font-size: 5em;
+        margin-bottom: 0;
+        color: rgb(24, 24, 24);
+        text-shadow: none;
         span {
+          color: #68b591;
+          text-align: left;
           display: block;
-          font-size: 0.9em;
-          margin-top: 0.5em;
         }
       }
+      .bot {
+        position: relative;
+        display: block;
+        font-size: 2.5em;
+        gap: 10px;
+        margin-top: 1em;
+        cursor: default;
+        color: #1d1d1d;
+        text-shadow:none;
+        text-align: left;
+      }
 
+      .buttonHolder {
+        margin: 0;
+        display: flex;
+        gap: 20px;
+        padding: 0;
+      }
+      .themebutton2 {
+        // background-color: lightskyblue;
+      }
       button {
-        padding: 0.6em 1.2em;
-        font-size: 0.9em;
+        @include baton();
+        font-size: 2.6em;
+        background-color: #68b591;
+        border: none;
+        opacity: 1;
+        color: white;
+        box-shadow: 1px 2px 9px #6d6d6d;
       }
     }
   }
-
 
   .showgreen {
     right: 1.5em;
@@ -198,4 +224,8 @@
     padding: 0.6em 1.2em;
     font-size: 0.85em;
   }
+}
+
+.theme-toggle{
+  display: none;
 }
