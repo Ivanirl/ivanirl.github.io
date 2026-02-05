@@ -360,8 +360,8 @@ button {
   justify-content: center;
   text-align: center;
   align-items: center;
-  
-  span{
+
+  span {
     color: white;
     font-weight: 100;
   }
@@ -583,7 +583,6 @@ button {
     }
   }
 }
-
 
 .kross {
   width: 50px;
@@ -845,6 +844,7 @@ button {
     display: flex;
     justify-content: center;
     padding: 1.7em 3em;
+    gap: 6em;
     //background-color: green;
     width: 100%;
     text-align: center;
@@ -876,6 +876,29 @@ button {
           text-align: left;
           color: #6d6d6d;
         }
+      }
+    }
+    ul {
+      //background: yellow;
+      display: flex;
+      flex-direction: column;
+      justify-content: left;
+      text-align: left;
+      gap: 1.1em;
+      padding: 1em;
+      span {
+        cursor: pointer;
+        color: #6d6d6d;
+        font-size: 1.3em;
+        font-weight: 200;
+        margin-bottom: 5px;
+        text-align: left;
+        margin-bottom: 10px;
+      }
+      li {
+        font-size: 1em;
+        text-align: left;
+        color: #6d6d6d;
       }
     }
   }

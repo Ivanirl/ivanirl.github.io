@@ -22,12 +22,12 @@ export default function Footer() {
             <li>About IVAN EZEH</li>
             <li>Investor Relations</li>
           </ul>
-          <ul className="vought3">
-            <span>DISCOVER</span>
-            <li>Partnership Oportunities</li>
-            <li>My Catalogue</li>
-          </ul>
         </div>
+        <ul className="vought3">
+          <span>DISCOVER</span>
+          <li>Partnership Oportunities</li>
+          <li>My Catalogue</li>
+        </ul>
       </motion.div>
       <motion.div
         initial={{ y: -20, opacity: 0 }}
@@ -40,11 +40,10 @@ export default function Footer() {
             IVAN EZEH is a digital service brand that prioritizes providing the
             best digital <br></br>experience for all customers. We have a large
             national presence, of which we are one of the market leaders.
-            <br></br> IVAN EZEH has its origin in Enugu state.We offer a wide
-            range
-            of high-quality digital services with the goal of <br></br>providing high
-            quality digital services from developing websites, motion graphics,
-            video editing and so much more!
+            <br></br> IVAN EZEH has its origin in Enugu state. We offer a wide
+            range of high-quality digital services with the goal of <br></br>
+            providing high quality digital services from developing websites,
+            motion graphics, video editing and so much more!
           </span>
           <span>Copyright 2026 IVAN EZEH. All rights reserved.</span>
           <span className="u">Select Country/State</span>
